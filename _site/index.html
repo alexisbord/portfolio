@@ -1,80 +1,499 @@
 <!DOCTYPE html>
-<html lang="fr" style="scroll-behavior: smooth;">
+<html lang="fr">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Alexis Bord</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/assets/css/style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/luminous-lightbox/2.3.2/luminous-basic.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>John Doe — Portfolio</title>
+  <meta name="description" content="Développeur Full Stack & Designer">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="/assets/css/main.css">
 </head>
 <body>
+  <header class="navbar" id="navbar">
+  <div class="navbar__container">
+    <a href="#hero" class="navbar__logo">John Doe</a>
+    
+    <button class="navbar__toggle" id="navToggle" aria-label="Menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
 
-  <header class="navbar">
-    <div class="nav-container">
-      <a href="#home" class="nav-logo">Alexis Bord</a>
-      <nav class="nav-links">
-        <a href="#about">À propos</a>
-        <a href="#experience">Stages</a>
-        <a href="#portfolio">Projets</a>
-        <a href="#formation">Formation</a>
-        <a href="mailto:votre.email@exemple.com" class="nav-btn-contact">Contact</a>
-      </nav>
-    </div>
-  </header>
-
-  <section id="home" class="hero">
-  <div class="hero-content">
-    <img src="assets/img/photo_alexis.jpg" class="profile-img" />
-    <h1 class="main-title">About Me</h1>
-    <p class="subtitle">Alexis BORD - <span>Ingénieur Data &amp; IA</span></p>
+    <nav class="navbar__nav" id="navMenu">
+      <ul>
+        <li><a href="#experience" class="nav-link">Expérience</a></li>
+        <li><a href="#formation" class="nav-link">Formation</a></li>
+        <li><a href="#projets" class="nav-link">Projets</a></li>
+        <li><a href="#competences" class="nav-link">Compétences</a></li>
+        <li><a href="#contact" class="nav-link nav-link--cta">Contact</a></li>
+      </ul>
+    </nav>
   </div>
-</section>
+</header>
 
-<section id="about" class="section">
-  <h2>À propos</h2>
-  <p>Étudiant en dernière année de double diplôme à <strong>Polytechnique Montréal</strong>. Je recherche un stage de 6 mois en France dès <strong>mai 2026</strong>.</p>
-  <div class="badges">
-    <span>TOEIC 955</span>
-    <span>Permis B</span>
-    <span>Allemand B1</span>
-  </div>
-</section>
-
-<section id="experience" class="section dark">
-  <h2>Stages &amp; Expériences</h2>
-  <div class="exp-card">
-    <h3>Titre du Poste</h3>
-    <p>Description courte de tes missions et outils (Python, R, PyTorch).</p>
-  </div>
-</section>
-
-<section id="portfolio" class="section">
-  <h2>Portfolio</h2>
-  <div class="project-grid">
-    <div class="project-card">
-      <a href="assets/img/resnet.jpg" class="zoom"><img src="assets/img/resnet.jpg" /></a>
-      <h3>Vision : ResNet</h3>
-      <p>Étude de robustesse sur modèles de Deep Learning.</p>
-    </div>
-    <div class="project-card">
-      <a href="assets/img/snake.png" class="zoom"><img src="assets/img/snake.png" /></a>
-      <h3>Snake Game</h3>
-      <p>Développement d'un jeu complet en Python.</p>
+  <main>
+    <!-- HERO -->
+<section class="hero" id="hero">
+  <div class="hero__bg"></div>
+  <div class="col-center">
+    <div class="hero__inner">
+      <div class="hero__text">
+        <span class="hero__badge">Disponible pour de nouveaux projets</span>
+        <h1 class="hero__name">John Doe</h1>
+        <p class="hero__title">Développeur Full Stack & Designer</p>
+        <p class="hero__bio">Passionné par la création d'expériences web performantes et accessibles. Je transforme des idées complexes en interfaces élégantes et robustes.</p>
+        <div class="hero__actions">
+          <a href="#projets" class="btn btn--primary">Voir mes projets</a>
+          <a href="#contact" class="btn btn--ghost">Me contacter</a>
+        </div>
+      </div>
+      <div class="hero__visual">
+        <div class="hero__avatar">
+          <img src="https://avatars.githubusercontent.com/u/583231?v=4" alt="John Doe" loading="lazy">
+        </div>
+        <div class="hero__dots"></div>
+      </div>
     </div>
   </div>
+  <a href="#experience" class="hero__scroll" aria-label="Défiler vers le bas">
+    <i class="fas fa-chevron-down"></i>
+  </a>
 </section>
 
-<section id="formation" class="section dark">
-  <h2>Formation</h2>
-  <ul>
-    <li><strong>Diplôme d'Ingénieur</strong> - Polytechnique Montréal (2026)</li>
-    <li>Spécialisation : Intelligence Artificielle et Data Science</li>
-  </ul>
+<!-- EXPERIENCE -->
+<section class="section section--alt" id="experience">
+  <div class="col-center">
+    <div class="section-header">
+      <span class="section-label">01</span>
+      <h2 class="section-title">Expérience</h2>
+      <p class="section-sub">Mon parcours professionnel</p>
+    </div>
+    <div class="timeline">
+      
+      <article class="timeline__item reveal">
+        <div class="timeline__marker"></div>
+        <div class="timeline__card">
+          <div class="timeline__header">
+            <div>
+              <h3 class="timeline__role">Développeur Full Stack Senior</h3>
+              <p class="timeline__company">TechCorp Paris</p>
+            </div>
+            <span class="timeline__period">2022 — Présent</span>
+          </div>
+          <p class="timeline__desc">Conception et développement d'applications web scalables. Leadership technique d'une équipe de 5 développeurs. Migration vers une architecture microservices.</p>
+          
+          <div class="timeline__images timeline__images--2">
+            
+            <figure class="project__figure">
+              <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=700&q=80" alt="Équipe de développement" loading="lazy">
+              
+            </figure>
+            
+            <figure class="project__figure">
+              <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=700&q=80" alt="Dashboard analytique" loading="lazy">
+              <figcaption>Légende optionnelle plus détaillée</figcaption>
+            </figure>
+            
+          </div>
+          
+          <div class="tags">
+            
+            <span class="tag">React</span>
+            
+            <span class="tag">Node.js</span>
+            
+            <span class="tag">PostgreSQL</span>
+            
+            <span class="tag">Docker</span>
+            
+          </div>
+        </div>
+      </article>
+      
+      <article class="timeline__item reveal">
+        <div class="timeline__marker"></div>
+        <div class="timeline__card">
+          <div class="timeline__header">
+            <div>
+              <h3 class="timeline__role">Développeur Front-End</h3>
+              <p class="timeline__company">Agence Créative Studio</p>
+            </div>
+            <span class="timeline__period">2019 — 2022</span>
+          </div>
+          <p class="timeline__desc">Développement d'interfaces utilisateur modernes pour des clients grands comptes. Mise en place d'un design system partagé.</p>
+          
+          <div class="tags">
+            
+            <span class="tag">Vue.js</span>
+            
+            <span class="tag">TypeScript</span>
+            
+            <span class="tag">SCSS</span>
+            
+            <span class="tag">Figma</span>
+            
+          </div>
+        </div>
+      </article>
+      
+      <article class="timeline__item reveal">
+        <div class="timeline__marker"></div>
+        <div class="timeline__card">
+          <div class="timeline__header">
+            <div>
+              <h3 class="timeline__role">Développeur Web Junior</h3>
+              <p class="timeline__company">StartupXYZ</p>
+            </div>
+            <span class="timeline__period">2017 — 2019</span>
+          </div>
+          <p class="timeline__desc">Développement et maintenance de l'application web principale. Intégration d'APIs tierces et optimisation des performances.</p>
+          
+          <div class="tags">
+            
+            <span class="tag">JavaScript</span>
+            
+            <span class="tag">PHP</span>
+            
+            <span class="tag">MySQL</span>
+            
+            <span class="tag">Git</span>
+            
+          </div>
+        </div>
+      </article>
+      
+    </div>
+  </div>
 </section>
 
+<!-- FORMATION -->
+<section class="section" id="formation">
+  <div class="col-center">
+    <div class="section-header">
+      <span class="section-label">02</span>
+      <h2 class="section-title">Formation</h2>
+      <p class="section-sub">Mon parcours académique</p>
+    </div>
+    <div class="edu-list">
+      
+      <article class="edu-item reveal">
+        <div class="edu-item__left">
+          <span class="edu-item__period">2015 — 2017</span>
+          <div class="edu-item__dot"></div>
+        </div>
+        <div class="edu-item__right">
+          <h3 class="edu-item__degree">Master Informatique — Génie Logiciel</h3>
+          <p class="edu-item__school"><i class="fas fa-map-marker-alt"></i> Université Pierre et Marie Curie</p>
+          <p class="edu-item__desc">Spécialisation en architecture logicielle et développement web. Mention très bien. Mémoire sur l'optimisation des Single Page Applications.</p>
+        </div>
+      </article>
+      
+      <article class="edu-item reveal">
+        <div class="edu-item__left">
+          <span class="edu-item__period">2012 — 2015</span>
+          <div class="edu-item__dot"></div>
+        </div>
+        <div class="edu-item__right">
+          <h3 class="edu-item__degree">Licence Informatique</h3>
+          <p class="edu-item__school"><i class="fas fa-map-marker-alt"></i> IUT de Montpellier</p>
+          <p class="edu-item__desc">Formation généraliste en informatique couvrant algorithmique, base de données, réseaux et développement logiciel.</p>
+        </div>
+      </article>
+      
+      <article class="edu-item reveal">
+        <div class="edu-item__left">
+          <span class="edu-item__period">2018 — 2024</span>
+          <div class="edu-item__dot"></div>
+        </div>
+        <div class="edu-item__right">
+          <h3 class="edu-item__degree">Certifications</h3>
+          <p class="edu-item__school"><i class="fas fa-map-marker-alt"></i> Diverses</p>
+          <p class="edu-item__desc">AWS Certified Developer (2023), Google Professional Cloud Developer (2022), MongoDB Associate Developer (2021).</p>
+        </div>
+      </article>
+      
+    </div>
+  </div>
+</section>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/luminous-lightbox/2.3.2/Luminous.min.js"></script>
-  <script>new LuminousGallery(document.querySelectorAll(".zoom"));</script>
+<!-- PROJETS -->
+<section class="section section--alt" id="projets">
+  <div class="col-center">
+    <div class="section-header">
+      <span class="section-label">03</span>
+      <h2 class="section-title">Projets</h2>
+      <p class="section-sub">Quelques réalisations récentes</p>
+    </div>
+
+    
+    <article class="project reveal">
+      <div class="project__header">
+        <h3 class="project__name">Projet #1 — DevFlow</h3>
+        <div class="project__links">
+          <a href="#" class="btn btn--ghost btn--sm" target="_blank" rel="noopener"><i class="fas fa-external-link-alt"></i> Demo</a>
+          <a href="#" class="btn btn--ghost btn--sm" target="_blank" rel="noopener"><i class="fab fa-github"></i> Code</a>
+        </div>
+      </div>
+
+      
+      <p class="project__text">Dans le cadre de mon master à l'Université Paris Saclay, j'ai développé une plateforme de gestion de projets agiles pour répondre aux besoins des équipes de développement distribuées.</p>
+      
+
+      
+      <p class="project__text"><strong>Objectif :</strong> Concevoir et implémenter une application web temps réel permettant la collaboration synchrone entre équipes, avec gestion des sprints, tableaux Kanban et métriques de vélocité.</p>
+      
+
+      
+      <div class="project__images project__images--2">
+        
+        <figure class="project__figure">
+          <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?w=700&q=80" alt="Interface principale DevFlow" loading="lazy">
+          
+        </figure>
+        
+        <figure class="project__figure">
+          <img src="https://images.unsplash.com/photo-1507925921958-8a62f3d1a50d?w=700&q=80" alt="Tableau Kanban en temps réel" loading="lazy">
+          
+        </figure>
+        
+      </div>
+      
+
+      
+      <p class="project__text project__text--result"><i class="fas fa-chart-line"></i> <strong>Résultat :</strong> L'application a été adoptée par 3 équipes internes lors du projet, avec une réduction mesurée de 30% du temps de coordination lors des cérémonies agiles.</p>
+      
+
+      <div class="tags">
+        
+        <span class="tag">React</span>
+        
+        <span class="tag">Socket.io</span>
+        
+        <span class="tag">Node.js</span>
+        
+        <span class="tag">MongoDB</span>
+        
+      </div>
+    </article>
+    
+    <article class="project reveal">
+      <div class="project__header">
+        <h3 class="project__name">Projet #2 — WeatherScope</h3>
+        <div class="project__links">
+          <a href="#" class="btn btn--ghost btn--sm" target="_blank" rel="noopener"><i class="fas fa-external-link-alt"></i> Demo</a>
+          <a href="#" class="btn btn--ghost btn--sm" target="_blank" rel="noopener"><i class="fab fa-github"></i> Code</a>
+        </div>
+      </div>
+
+      
+      <p class="project__text">Application météo PWA développée en autonomie pour explorer les possibilités des Progressive Web Apps et des APIs de données environnementales.</p>
+      
+
+      
+      <p class="project__text"><strong>Objectif :</strong> Fournir des prévisions hyper-locales avec visualisation de données interactives, support offline complet et notifications push pour les alertes météo sévères.</p>
+      
+
+      
+      <div class="project__images project__images--2">
+        
+        <figure class="project__figure">
+          <img src="https://images.unsplash.com/photo-1504608524841-42584120d693?w=700&q=80" alt="Visualisation météo interactive" loading="lazy">
+          
+        </figure>
+        
+        <figure class="project__figure">
+          <img src="https://images.unsplash.com/photo-1561484930-998b6a7b22e8?w=700&q=80" alt="Dashboard mobile WeatherScope" loading="lazy">
+          
+        </figure>
+        
+      </div>
+      
+
+      
+      <p class="project__text project__text--result"><i class="fas fa-chart-line"></i> <strong>Résultat :</strong> Application publiée avec 500+ utilisateurs actifs, score Lighthouse 97/100, et sélectionnée comme exemple de bonnes pratiques PWA dans un article Medium.</p>
+      
+
+      <div class="tags">
+        
+        <span class="tag">Vue.js</span>
+        
+        <span class="tag">D3.js</span>
+        
+        <span class="tag">OpenWeather API</span>
+        
+        <span class="tag">PWA</span>
+        
+      </div>
+    </article>
+    
+    <article class="project reveal">
+      <div class="project__header">
+        <h3 class="project__name">Projet #3 — CLI DevTools</h3>
+        <div class="project__links">
+          <a href="#" class="btn btn--ghost btn--sm" target="_blank" rel="noopener"><i class="fas fa-external-link-alt"></i> Demo</a>
+          <a href="#" class="btn btn--ghost btn--sm" target="_blank" rel="noopener"><i class="fab fa-github"></i> Code</a>
+        </div>
+      </div>
+
+      
+      <p class="project__text">Suite d'outils open source créée pour automatiser les tâches répétitives du workflow développeur, initialement pour un usage personnel puis partagée sur GitHub.</p>
+      
+
+      
+      <p class="project__text"><strong>Objectif :</strong> Proposer un ensemble d'utilitaires CLI modulaires couvrant la génération de boilerplate, la gestion de secrets, le scaffolding de projets et les helpers Git.</p>
+      
+
+      
+      <div class="project__images project__images--1">
+        
+        <figure class="project__figure">
+          <img src="https://images.unsplash.com/photo-1629654297299-c8506221ca97?w=700&q=80" alt="Terminal CLI DevTools" loading="lazy">
+          
+        </figure>
+        
+      </div>
+      
+
+      
+      <p class="project__text project__text--result"><i class="fas fa-chart-line"></i> <strong>Résultat :</strong> Plus de 1 200 étoiles sur GitHub, 40+ contributeurs externes, packagé sur PyPI avec 8 000+ téléchargements mensuels.</p>
+      
+
+      <div class="tags">
+        
+        <span class="tag">Python</span>
+        
+        <span class="tag">Click</span>
+        
+        <span class="tag">Rich</span>
+        
+        <span class="tag">Docker</span>
+        
+      </div>
+    </article>
+    
+
+  </div>
+</section>
+
+<!-- COMPÉTENCES -->
+<section class="section" id="competences">
+  <div class="col-center">
+    <div class="section-header">
+      <span class="section-label">04</span>
+      <h2 class="section-title">Compétences</h2>
+      <p class="section-sub">Technologies &amp; outils maîtrisés</p>
+    </div>
+    <div class="skills-grid">
+      
+      <div class="skill-block reveal">
+        <h3 class="skill-block__cat">Front-End</h3>
+        <div class="skill-block__items">
+          
+          <span class="skill-pill">React</span>
+          
+          <span class="skill-pill">Vue.js</span>
+          
+          <span class="skill-pill">TypeScript</span>
+          
+          <span class="skill-pill">HTML/CSS</span>
+          
+          <span class="skill-pill">SCSS</span>
+          
+          <span class="skill-pill">Tailwind</span>
+          
+          <span class="skill-pill">D3.js</span>
+          
+        </div>
+      </div>
+      
+      <div class="skill-block reveal">
+        <h3 class="skill-block__cat">Back-End</h3>
+        <div class="skill-block__items">
+          
+          <span class="skill-pill">Node.js</span>
+          
+          <span class="skill-pill">Python</span>
+          
+          <span class="skill-pill">PHP</span>
+          
+          <span class="skill-pill">REST APIs</span>
+          
+          <span class="skill-pill">GraphQL</span>
+          
+          <span class="skill-pill">PostgreSQL</span>
+          
+          <span class="skill-pill">MongoDB</span>
+          
+        </div>
+      </div>
+      
+      <div class="skill-block reveal">
+        <h3 class="skill-block__cat">DevOps & Tools</h3>
+        <div class="skill-block__items">
+          
+          <span class="skill-pill">Docker</span>
+          
+          <span class="skill-pill">AWS</span>
+          
+          <span class="skill-pill">Git</span>
+          
+          <span class="skill-pill">CI/CD</span>
+          
+          <span class="skill-pill">Linux</span>
+          
+          <span class="skill-pill">Nginx</span>
+          
+          <span class="skill-pill">Figma</span>
+          
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</section>
+
+  </main>
+  <footer class="footer" id="contact">
+  <div class="col-center">
+    <div class="footer__content">
+      <div class="footer__main">
+        <h2 class="footer__title">Travaillons ensemble.</h2>
+        <p class="footer__sub">Ouvert aux opportunités freelance & CDI</p>
+        <a href="mailto:john@example.com" class="footer__email">john@example.com</a>
+      </div>
+      <div class="footer__links">
+        
+        <a href="https://github.com/johndoe" target="_blank" rel="noopener" aria-label="GitHub">
+          <i class="fab fa-github"></i>
+        </a>
+        
+        
+        <a href="https://linkedin.com/in/johndoe" target="_blank" rel="noopener" aria-label="LinkedIn">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+        
+        
+        <a href="https://twitter.com/johndoe" target="_blank" rel="noopener" aria-label="Twitter">
+          <i class="fab fa-x-twitter"></i>
+        </a>
+        
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p>© 2026 John Doe. Construit avec Jekyll &amp; ❤️</p>
+    </div>
+  </div>
+</footer>
+
+  <script src="/assets/js/main.js"></script>
 </body>
 </html>

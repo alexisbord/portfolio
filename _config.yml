@@ -1,13 +1,24 @@
-title: Alexis Bord
-email: votre.email@exemple.com
-description: Élève ingénieur en Data & IA à Polytechnique Montréal. Recherche de stage de 6 mois en France - Mai 2026.
-url: "https://alexisbord.github.io"
-baseurl: ""
+title: "John Doe"
+description: "Développeur Full Stack & Designer"
+email: "john@example.com"
+github: "johndoe"
+linkedin: "johndoe"
+twitter: "johndoe"
 
-# Liens de navigation
-header_pages:
-  - index.md
-  - projects.md
+# Build settings
+plugins:
+  - jekyll-feed
 
-# Thème de base
-theme: minima
+# Sass
+sass:
+  sass_dir: _sass
+  style: compressed
+
+# Permalinks
+permalink: pretty
+
+# Exclude from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md

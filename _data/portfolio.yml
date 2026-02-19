@@ -1,0 +1,86 @@
+experience:
+  - title: "Développeur Full Stack Senior"
+    company: "TechCorp Paris"
+    period: "2022 — Présent"
+    description: "Conception et développement d'applications web scalables. Leadership technique d'une équipe de 5 développeurs. Migration vers une architecture microservices."
+    tags: ["React", "Node.js", "PostgreSQL", "Docker"]
+    images:
+      - src: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=700&q=80"
+        alt: "Équipe de développement"
+      - src: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=700&q=80"
+        alt: "Dashboard analytique"
+        caption: "Légende optionnelle plus détaillée"
+
+  - title: "Développeur Front-End"
+    company: "Agence Créative Studio"
+    period: "2019 — 2022"
+    description: "Développement d'interfaces utilisateur modernes pour des clients grands comptes. Mise en place d'un design system partagé."
+    tags: ["Vue.js", "TypeScript", "SCSS", "Figma"]
+
+  - title: "Développeur Web Junior"
+    company: "StartupXYZ"
+    period: "2017 — 2019"
+    description: "Développement et maintenance de l'application web principale. Intégration d'APIs tierces et optimisation des performances."
+    tags: ["JavaScript", "PHP", "MySQL", "Git"]
+
+education:
+  - degree: "Master Informatique — Génie Logiciel"
+    school: "Université Pierre et Marie Curie"
+    period: "2015 — 2017"
+    description: "Spécialisation en architecture logicielle et développement web. Mention très bien. Mémoire sur l'optimisation des Single Page Applications."
+
+  - degree: "Licence Informatique"
+    school: "IUT de Montpellier"
+    period: "2012 — 2015"
+    description: "Formation généraliste en informatique couvrant algorithmique, base de données, réseaux et développement logiciel."
+
+  - degree: "Certifications"
+    school: "Diverses"
+    period: "2018 — 2024"
+    description: "AWS Certified Developer (2023), Google Professional Cloud Developer (2022), MongoDB Associate Developer (2021)."
+
+projects:
+  - name: "Projet #1 — DevFlow"
+    context: "Dans le cadre de mon master à l'Université Paris Saclay, j'ai développé une plateforme de gestion de projets agiles pour répondre aux besoins des équipes de développement distribuées."
+    objective: "Concevoir et implémenter une application web temps réel permettant la collaboration synchrone entre équipes, avec gestion des sprints, tableaux Kanban et métriques de vélocité."
+    result: "L'application a été adoptée par 3 équipes internes lors du projet, avec une réduction mesurée de 30% du temps de coordination lors des cérémonies agiles."
+    tags: ["React", "Socket.io", "Node.js", "MongoDB"]
+    github: "#"
+    demo: "#"
+    images:
+      - src: "https://images.unsplash.com/photo-1551650975-87deedd944c3?w=700&q=80"
+        alt: "Interface principale DevFlow"
+      - src: "https://images.unsplash.com/photo-1507925921958-8a62f3d1a50d?w=700&q=80"
+        alt: "Tableau Kanban en temps réel"
+
+  - name: "Projet #2 — WeatherScope"
+    context: "Application météo PWA développée en autonomie pour explorer les possibilités des Progressive Web Apps et des APIs de données environnementales."
+    objective: "Fournir des prévisions hyper-locales avec visualisation de données interactives, support offline complet et notifications push pour les alertes météo sévères."
+    result: "Application publiée avec 500+ utilisateurs actifs, score Lighthouse 97/100, et sélectionnée comme exemple de bonnes pratiques PWA dans un article Medium."
+    tags: ["Vue.js", "D3.js", "OpenWeather API", "PWA"]
+    github: "#"
+    demo: "#"
+    images:
+      - src: "https://images.unsplash.com/photo-1504608524841-42584120d693?w=700&q=80"
+        alt: "Visualisation météo interactive"
+      - src: "https://images.unsplash.com/photo-1561484930-998b6a7b22e8?w=700&q=80"
+        alt: "Dashboard mobile WeatherScope"
+
+  - name: "Projet #3 — CLI DevTools"
+    context: "Suite d'outils open source créée pour automatiser les tâches répétitives du workflow développeur, initialement pour un usage personnel puis partagée sur GitHub."
+    objective: "Proposer un ensemble d'utilitaires CLI modulaires couvrant la génération de boilerplate, la gestion de secrets, le scaffolding de projets et les helpers Git."
+    result: "Plus de 1 200 étoiles sur GitHub, 40+ contributeurs externes, packagé sur PyPI avec 8 000+ téléchargements mensuels."
+    tags: ["Python", "Click", "Rich", "Docker"]
+    github: "#"
+    demo: "#"
+    images:
+      - src: "https://images.unsplash.com/photo-1629654297299-c8506221ca97?w=700&q=80"
+        alt: "Terminal CLI DevTools"
+
+skills:
+  - category: "Front-End"
+    items: ["React", "Vue.js", "TypeScript", "HTML/CSS", "SCSS", "Tailwind", "D3.js"]
+  - category: "Back-End"
+    items: ["Node.js", "Python", "PHP", "REST APIs", "GraphQL", "PostgreSQL", "MongoDB"]
+  - category: "DevOps & Tools"
+    items: ["Docker", "AWS", "Git", "CI/CD", "Linux", "Nginx", "Figma"]

@@ -1,0 +1,176 @@
+---
+layout: default
+---
+
+<!-- HERO -->
+<section class="hero" id="hero">
+  <div class="hero__bg"></div>
+  <div class="col-center">
+    <div class="hero__inner">
+      <div class="hero__text">
+        <span class="hero__badge">Disponible pour de nouveaux projets</span>
+        <h1 class="hero__name">{{ site.title }}</h1>
+        <p class="hero__title">{{ site.description }}</p>
+        <p class="hero__bio">Passionné par la création d'expériences web performantes et accessibles. Je transforme des idées complexes en interfaces élégantes et robustes.</p>
+        <div class="hero__actions">
+          <a href="#projets" class="btn btn--primary">Voir mes projets</a>
+          <a href="#contact" class="btn btn--ghost">Me contacter</a>
+        </div>
+      </div>
+      <div class="hero__visual">
+        <div class="hero__avatar">
+          <img src="https://avatars.githubusercontent.com/u/583231?v=4" alt="{{ site.title }}" loading="lazy">
+        </div>
+        <div class="hero__dots"></div>
+      </div>
+    </div>
+  </div>
+  <a href="#experience" class="hero__scroll" aria-label="Défiler vers le bas">
+    <i class="fas fa-chevron-down"></i>
+  </a>
+</section>
+
+<!-- EXPERIENCE -->
+<section class="section section--alt" id="experience">
+  <div class="col-center">
+    <div class="section-header">
+      <span class="section-label">01</span>
+      <h2 class="section-title">Expérience</h2>
+      <p class="section-sub">Mon parcours professionnel</p>
+    </div>
+    <div class="timeline">
+      {% for job in site.data.portfolio.experience %}
+      <article class="timeline__item reveal">
+        <div class="timeline__marker"></div>
+        <div class="timeline__card">
+          <div class="timeline__header">
+            <div>
+              <h3 class="timeline__role">{{ job.title }}</h3>
+              <p class="timeline__company">{{ job.company }}</p>
+            </div>
+            <span class="timeline__period">{{ job.period }}</span>
+          </div>
+          <p class="timeline__desc">{{ job.description }}</p>
+          {% if job.images %}
+          <div class="timeline__images timeline__images--{{ job.images | size }}">
+            {% for img in job.images %}
+            <figure class="project__figure">
+              <img src="{{ img.src }}" alt="{{ img.alt }}" loading="lazy">
+              {% if img.caption %}<figcaption>{{ img.caption }}</figcaption>{% endif %}
+            </figure>
+            {% endfor %}
+          </div>
+          {% endif %}
+          <div class="tags">
+            {% for tag in job.tags %}
+            <span class="tag">{{ tag }}</span>
+            {% endfor %}
+          </div>
+        </div>
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- FORMATION -->
+<section class="section" id="formation">
+  <div class="col-center">
+    <div class="section-header">
+      <span class="section-label">02</span>
+      <h2 class="section-title">Formation</h2>
+      <p class="section-sub">Mon parcours académique</p>
+    </div>
+    <div class="edu-list">
+      {% for edu in site.data.portfolio.education %}
+      <article class="edu-item reveal">
+        <div class="edu-item__left">
+          <span class="edu-item__period">{{ edu.period }}</span>
+          <div class="edu-item__dot"></div>
+        </div>
+        <div class="edu-item__right">
+          <h3 class="edu-item__degree">{{ edu.degree }}</h3>
+          <p class="edu-item__school"><i class="fas fa-map-marker-alt"></i> {{ edu.school }}</p>
+          <p class="edu-item__desc">{{ edu.description }}</p>
+        </div>
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- PROJETS -->
+<section class="section section--alt" id="projets">
+  <div class="col-center">
+    <div class="section-header">
+      <span class="section-label">03</span>
+      <h2 class="section-title">Projets</h2>
+      <p class="section-sub">Quelques réalisations récentes</p>
+    </div>
+
+    {% for project in site.data.portfolio.projects %}
+    <article class="project reveal">
+      <div class="project__header">
+        <h3 class="project__name">{{ project.name }}</h3>
+        <div class="project__links">
+          {% if project.demo %}<a href="{{ project.demo }}" class="btn btn--ghost btn--sm" target="_blank" rel="noopener"><i class="fas fa-external-link-alt"></i> Demo</a>{% endif %}
+          {% if project.github %}<a href="{{ project.github }}" class="btn btn--ghost btn--sm" target="_blank" rel="noopener"><i class="fab fa-github"></i> Code</a>{% endif %}
+        </div>
+      </div>
+
+      {% if project.context %}
+      <p class="project__text">{{ project.context }}</p>
+      {% endif %}
+
+      {% if project.objective %}
+      <p class="project__text"><strong>Objectif :</strong> {{ project.objective }}</p>
+      {% endif %}
+
+      {% if project.images %}
+      <div class="project__images project__images--{{ project.images | size }}">
+        {% for img in project.images %}
+        <figure class="project__figure">
+          <img src="{{ img.src }}" alt="{{ img.alt }}" loading="lazy">
+          {% if img.caption %}<figcaption>{{ img.caption }}</figcaption>{% endif %}
+        </figure>
+        {% endfor %}
+      </div>
+      {% endif %}
+
+      {% if project.result %}
+      <p class="project__text project__text--result"><i class="fas fa-chart-line"></i> <strong>Résultat :</strong> {{ project.result }}</p>
+      {% endif %}
+
+      <div class="tags">
+        {% for tag in project.tags %}
+        <span class="tag">{{ tag }}</span>
+        {% endfor %}
+      </div>
+    </article>
+    {% endfor %}
+
+  </div>
+</section>
+
+<!-- COMPÉTENCES -->
+<section class="section" id="competences">
+  <div class="col-center">
+    <div class="section-header">
+      <span class="section-label">04</span>
+      <h2 class="section-title">Compétences</h2>
+      <p class="section-sub">Technologies &amp; outils maîtrisés</p>
+    </div>
+    <div class="skills-grid">
+      {% for skill_group in site.data.portfolio.skills %}
+      <div class="skill-block reveal">
+        <h3 class="skill-block__cat">{{ skill_group.category }}</h3>
+        <div class="skill-block__items">
+          {% for item in skill_group.items %}
+          <span class="skill-pill">{{ item }}</span>
+          {% endfor %}
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
