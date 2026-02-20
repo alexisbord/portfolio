@@ -1,5 +1,6 @@
 experience:
   - title: "Développeur Full Stack Senior"
+    logo: "https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg"
     company: "TechCorp Paris"
     period: "2022 — Présent"
     description: "Conception et développement d'applications web scalables. Leadership technique d'une équipe de 5 développeurs. Migration vers une architecture microservices."
@@ -9,22 +10,52 @@ experience:
         alt: "Équipe de développement"
       - src: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=700&q=80"
         alt: "Dashboard analytique"
-        caption: "Légende optionnelle plus détaillée"
+    details:
+      - type: text
+        content: "En rejoignant TechCorp Paris en 2022, j'ai pris la tête technique d'une équipe de 5 développeurs pour refondre l'infrastructure backend de l'application principale, qui supportait alors 50 000 utilisateurs actifs."
+      - type: text
+        content: "Le projet phare a été la migration d'une architecture monolithique vers des microservices Docker orchestrés via Kubernetes. Cette transition a réduit le temps de déploiement de 45 minutes à moins de 3 minutes, et amélioré la disponibilité de 97,2% à 99,8%."
+      - type: images
+        items:
+          - src: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=900&q=80"
+            alt: "Réunion d'équipe technique"
+            caption: "Sprint planning hebdomadaire"
+          - src: "https://images.unsplash.com/photo-1605379399642-870262d3d051?w=900&q=80"
+            alt: "Architecture microservices"
+            caption: "Schéma d'architecture cible"
+      - type: text
+        content: "J'ai également introduit des pratiques de code review systématiques et une pipeline CI/CD complète avec tests automatisés, réduisant le taux de bugs en production de 60%."
 
   - title: "Développeur Front-End"
     company: "Agence Créative Studio"
     period: "2019 — 2022"
     description: "Développement d'interfaces utilisateur modernes pour des clients grands comptes. Mise en place d'un design system partagé."
     tags: ["Vue.js", "TypeScript", "SCSS", "Figma"]
+    details:
+      - type: text
+        content: "Au sein de l'Agence Créative Studio, j'ai travaillé sur une dizaine de projets pour des clients comme L'Oréal, Decathlon et BNP Paribas. Mon rôle était de transformer les maquettes Figma en interfaces web performantes et accessibles."
+      - type: images
+        items:
+          - src: "https://images.unsplash.com/photo-1561070791-2526d30994b5?w=900&q=80"
+            alt: "Design system"
+            caption: "Composants du design system"
+      - type: text
+        content: "L'initiative dont je suis le plus fier est la création d'un design system partagé entre toutes les équipes, composé de plus de 80 composants Vue.js documentés sous Storybook. Cela a divisé par deux le temps de démarrage des nouveaux projets."
 
   - title: "Développeur Web Junior"
     company: "StartupXYZ"
     period: "2017 — 2019"
     description: "Développement et maintenance de l'application web principale. Intégration d'APIs tierces et optimisation des performances."
     tags: ["JavaScript", "PHP", "MySQL", "Git"]
+    details:
+      - type: text
+        content: "Mon premier poste m'a plongé dans un environnement startup dynamique. J'ai été responsable du développement de nouvelles fonctionnalités sur l'application SaaS principale, utilisée par environ 2 000 clients PME."
+      - type: text
+        content: "Une mission clé a été l'intégration de plusieurs APIs tierces (Stripe, Mailchimp, Zapier) et l'optimisation de la base de données MySQL, réduisant les temps de chargement de 4s à moins de 800ms."
 
 education:
   - degree: "Master Informatique — Génie Logiciel"
+    logo: "https://upload.wikimedia.org/wikipedia/fr/thumb/5/51/Sorbonne_Universit%C3%A9_-_Lettres_logo_2018.svg/200px-Sorbonne_Universit%C3%A9_-_Lettres_logo_2018.svg.png"
     school: "Université Pierre et Marie Curie"
     period: "2015 — 2017"
     description: "Spécialisation en architecture logicielle et développement web. Mention très bien. Mémoire sur l'optimisation des Single Page Applications."
@@ -41,9 +72,9 @@ education:
 
 projects:
   - name: "Projet #1 — DevFlow"
-    context: "Dans le cadre de mon master à l'Université Paris Saclay, j'ai développé une plateforme de gestion de projets agiles pour répondre aux besoins des équipes de développement distribuées."
+    context: "Dans le cadre de mon master à l'Université Paris Saclay, j'ai développé une plateforme de gestion de projets agiles pour répondre aux besoins des équipes distribuées."
     objective: "Concevoir et implémenter une application web temps réel permettant la collaboration synchrone entre équipes, avec gestion des sprints, tableaux Kanban et métriques de vélocité."
-    result: "L'application a été adoptée par 3 équipes internes lors du projet, avec une réduction mesurée de 30% du temps de coordination lors des cérémonies agiles."
+    result: "L'application a été adoptée par 3 équipes internes, avec une réduction mesurée de 30% du temps de coordination lors des cérémonies agiles."
     tags: ["React", "Socket.io", "Node.js", "MongoDB"]
     github: "#"
     demo: "#"
@@ -52,11 +83,29 @@ projects:
         alt: "Interface principale DevFlow"
       - src: "https://images.unsplash.com/photo-1507925921958-8a62f3d1a50d?w=700&q=80"
         alt: "Tableau Kanban en temps réel"
+    details:
+      - type: text
+        content: "DevFlow est né d'un constat simple : les outils de gestion de projet existants sont soit trop lourds, soit trop limités pour les petites équipes agiles. L'objectif était de créer un outil minimaliste mais puissant."
+      - type: images
+        items:
+          - src: "https://images.unsplash.com/photo-1531403009284-440f080d1e12?w=900&q=80"
+            alt: "Tableau Kanban DevFlow"
+            caption: "Vue Kanban avec drag & drop"
+          - src: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=900&q=80"
+            alt: "Dashboard métriques"
+            caption: "Dashboard de vélocité d'équipe"
+      - type: text
+        content: "L'architecture repose sur React + Redux côté client et Node.js + Socket.io côté serveur pour la synchronisation temps réel. La grande difficulté technique a été la gestion des conflits lors d'éditions simultanées, résolue via un système de verrous optimistes."
+      - type: images
+        items:
+          - src: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=900&q=80"
+            alt: "Code source DevFlow"
+            caption: "Extrait du code backend"
 
   - name: "Projet #2 — WeatherScope"
     context: "Application météo PWA développée en autonomie pour explorer les possibilités des Progressive Web Apps et des APIs de données environnementales."
     objective: "Fournir des prévisions hyper-locales avec visualisation de données interactives, support offline complet et notifications push pour les alertes météo sévères."
-    result: "Application publiée avec 500+ utilisateurs actifs, score Lighthouse 97/100, et sélectionnée comme exemple de bonnes pratiques PWA dans un article Medium."
+    result: "500+ utilisateurs actifs, score Lighthouse 97/100, sélectionnée comme exemple de bonnes pratiques PWA dans un article Medium."
     tags: ["Vue.js", "D3.js", "OpenWeather API", "PWA"]
     github: "#"
     demo: "#"
@@ -65,17 +114,40 @@ projects:
         alt: "Visualisation météo interactive"
       - src: "https://images.unsplash.com/photo-1561484930-998b6a7b22e8?w=700&q=80"
         alt: "Dashboard mobile WeatherScope"
+    details:
+      - type: text
+        content: "WeatherScope est parti d'une frustration personnelle : les applications météo existantes affichent trop d'informations inutiles. J'ai voulu créer une interface épurée centrée sur l'essentiel."
+      - type: images
+        items:
+          - src: "https://images.unsplash.com/photo-1504608524841-42584120d693?w=900&q=80"
+            alt: "Interface WeatherScope"
+            caption: "Vue principale avec prévisions 7 jours"
+          - src: "https://images.unsplash.com/photo-1561484930-998b6a7b22e8?w=900&q=80"
+            alt: "Visualisations D3.js"
+            caption: "Graphiques de précipitations en D3.js"
+      - type: text
+        content: "Les visualisations D3.js ont été la partie la plus technique. J'ai développé des graphiques animés pour les courbes de température et les roses des vents, optimisés pour fonctionner parfaitement sur mobile."
 
   - name: "Projet #3 — CLI DevTools"
     context: "Suite d'outils open source créée pour automatiser les tâches répétitives du workflow développeur, initialement pour un usage personnel puis partagée sur GitHub."
     objective: "Proposer un ensemble d'utilitaires CLI modulaires couvrant la génération de boilerplate, la gestion de secrets, le scaffolding de projets et les helpers Git."
-    result: "Plus de 1 200 étoiles sur GitHub, 40+ contributeurs externes, packagé sur PyPI avec 8 000+ téléchargements mensuels."
+    result: "1 200+ étoiles sur GitHub, 40+ contributeurs externes, packagé sur PyPI avec 8 000+ téléchargements mensuels."
     tags: ["Python", "Click", "Rich", "Docker"]
     github: "#"
     demo: "#"
     images:
       - src: "https://images.unsplash.com/photo-1629654297299-c8506221ca97?w=700&q=80"
         alt: "Terminal CLI DevTools"
+    details:
+      - type: text
+        content: "CLI DevTools a commencé comme une collection de scripts bash personnels avant d'évoluer en une suite Python structurée. La réécriture avec Click a permis d'ajouter une documentation automatique et une gestion des erreurs robuste."
+      - type: images
+        items:
+          - src: "https://images.unsplash.com/photo-1629654297299-c8506221ca97?w=900&q=80"
+            alt: "CLI en action"
+            caption: "Interface Rich avec couleurs et progress bars"
+      - type: text
+        content: "Le projet a pris une dimension inattendue après un post sur Reddit. En une semaine, le repo est passé de 12 à 800 étoiles. Gérer cette communauté soudaine a été une expérience très formatrice sur la gestion open source."
 
 skills:
   - category: "Front-End"

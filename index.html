@@ -40,15 +40,25 @@ layout: default
     </div>
     <div class="timeline">
       {% for job in site.data.portfolio.experience %}
+      {% assign job_id = job.title | slugify %}
       <article class="timeline__item reveal">
         <div class="timeline__marker"></div>
-        <div class="timeline__card">
+        <div class="timeline__card {% if job.details %}is-clickable{% endif %}"
+          {% if job.details %}data-modal="{{ job_id }}"{% endif %}>
           <div class="timeline__header">
-            <div>
-              <h3 class="timeline__role">{{ job.title }}</h3>
-              <p class="timeline__company">{{ job.company }}</p>
+            <div class="entity-info">
+              {% if job.logo %}
+              <img src="{{ job.logo }}" alt="{{ job.company }}" class="entity-logo">
+              {% endif %}
+              <div>
+                <h3 class="timeline__role">{{ job.title }}</h3>
+                <p class="timeline__company">{{ job.company }}</p>
+              </div>
             </div>
-            <span class="timeline__period">{{ job.period }}</span>
+            <div class="timeline__header-right">
+              <span class="timeline__period">{{ job.period }}</span>
+              {% if job.details %}<span class="card-hint"><i class="fas fa-expand-alt"></i> Détails</span>{% endif %}
+            </div>
           </div>
           <p class="timeline__desc">{{ job.description }}</p>
           {% if job.images %}
@@ -56,18 +66,53 @@ layout: default
             {% for img in job.images %}
             <figure class="project__figure">
               <img src="{{ img.src }}" alt="{{ img.alt }}" loading="lazy">
-              {% if img.caption %}<figcaption>{{ img.caption }}</figcaption>{% endif %}
+              {% if img.alt %}<figcaption>{{ img.alt }}</figcaption>{% endif %}
             </figure>
             {% endfor %}
           </div>
           {% endif %}
           <div class="tags">
-            {% for tag in job.tags %}
-            <span class="tag">{{ tag }}</span>
-            {% endfor %}
+            {% for tag in job.tags %}<span class="tag">{{ tag }}</span>{% endfor %}
           </div>
         </div>
       </article>
+
+      {% if job.details %}
+      <div class="modal" id="modal-{{ job_id }}" role="dialog" aria-modal="true">
+        <div class="modal__backdrop"></div>
+        <div class="modal__box">
+          <div class="modal__header">
+            <div class="entity-info">
+              {% if job.logo %}
+              <img src="{{ job.logo }}" alt="{{ job.company }}" class="entity-logo entity-logo--lg">
+              {% endif %}
+              <div>
+                <h2 class="modal__title">{{ job.title }}</h2>
+                <p class="modal__sub">{{ job.company }} · {{ job.period }}</p>
+              </div>
+            </div>
+            <button class="modal__close" aria-label="Fermer"><i class="fas fa-times"></i></button>
+          </div>
+          <div class="modal__body">
+            {% for block in job.details %}
+              {% if block.type == "text" %}
+              <p class="modal__text">{{ block.content }}</p>
+              {% elsif block.type == "images" %}
+              <div class="modal__images modal__images--{{ block.items | size }}">
+                {% for img in block.items %}
+                <figure class="project__figure">
+                  <img src="{{ img.src }}" alt="{{ img.alt }}" loading="lazy">
+                  {% if img.caption %}<figcaption>{{ img.caption }}</figcaption>{% endif %}
+                </figure>
+                {% endfor %}
+              </div>
+              {% endif %}
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+      {% endif %}
+
       {% endfor %}
     </div>
   </div>
@@ -89,8 +134,15 @@ layout: default
           <div class="edu-item__dot"></div>
         </div>
         <div class="edu-item__right">
-          <h3 class="edu-item__degree">{{ edu.degree }}</h3>
-          <p class="edu-item__school"><i class="fas fa-map-marker-alt"></i> {{ edu.school }}</p>
+          <div class="entity-info">
+            {% if edu.logo %}
+            <img src="{{ edu.logo }}" alt="{{ edu.school }}" class="entity-logo">
+            {% endif %}
+            <div>
+              <h3 class="edu-item__degree">{{ edu.degree }}</h3>
+              <p class="edu-item__school"><i class="fas fa-map-marker-alt"></i> {{ edu.school }}</p>
+            </div>
+          </div>
           <p class="edu-item__desc">{{ edu.description }}</p>
         </div>
       </article>
@@ -109,46 +161,73 @@ layout: default
     </div>
 
     {% for project in site.data.portfolio.projects %}
-    <article class="project reveal">
+    {% assign proj_id = project.name | slugify %}
+    <article class="project reveal {% if project.details %}is-clickable{% endif %}"
+      {% if project.details %}data-modal="{{ proj_id }}"{% endif %}>
       <div class="project__header">
-        <h3 class="project__name">{{ project.name }}</h3>
+        <div class="project__title-row">
+          <h3 class="project__name">{{ project.name }}</h3>
+          {% if project.details %}<span class="card-hint"><i class="fas fa-expand-alt"></i> Lire plus</span>{% endif %}
+        </div>
         <div class="project__links">
-          {% if project.demo %}<a href="{{ project.demo }}" class="btn btn--ghost btn--sm" target="_blank" rel="noopener"><i class="fas fa-external-link-alt"></i> Demo</a>{% endif %}
-          {% if project.github %}<a href="{{ project.github }}" class="btn btn--ghost btn--sm" target="_blank" rel="noopener"><i class="fab fa-github"></i> Code</a>{% endif %}
+          {% if project.demo %}<a href="{{ project.demo }}" class="btn btn--ghost btn--sm" target="_blank" rel="noopener" onclick="event.stopPropagation()"><i class="fas fa-external-link-alt"></i> Demo</a>{% endif %}
+          {% if project.github %}<a href="{{ project.github }}" class="btn btn--ghost btn--sm" target="_blank" rel="noopener" onclick="event.stopPropagation()"><i class="fab fa-github"></i> Code</a>{% endif %}
         </div>
       </div>
-
-      {% if project.context %}
-      <p class="project__text">{{ project.context }}</p>
-      {% endif %}
-
-      {% if project.objective %}
-      <p class="project__text"><strong>Objectif :</strong> {{ project.objective }}</p>
-      {% endif %}
-
+      {% if project.context %}<p class="project__text">{{ project.context }}</p>{% endif %}
+      {% if project.objective %}<p class="project__text"><strong>Objectif :</strong> {{ project.objective }}</p>{% endif %}
       {% if project.images %}
       <div class="project__images project__images--{{ project.images | size }}">
         {% for img in project.images %}
         <figure class="project__figure">
           <img src="{{ img.src }}" alt="{{ img.alt }}" loading="lazy">
-          {% if img.caption %}<figcaption>{{ img.caption }}</figcaption>{% endif %}
+          {% if img.alt %}<figcaption>{{ img.alt }}</figcaption>{% endif %}
         </figure>
         {% endfor %}
       </div>
       {% endif %}
-
       {% if project.result %}
       <p class="project__text project__text--result"><i class="fas fa-chart-line"></i> <strong>Résultat :</strong> {{ project.result }}</p>
       {% endif %}
-
       <div class="tags">
-        {% for tag in project.tags %}
-        <span class="tag">{{ tag }}</span>
-        {% endfor %}
+        {% for tag in project.tags %}<span class="tag">{{ tag }}</span>{% endfor %}
       </div>
     </article>
-    {% endfor %}
 
+    {% if project.details %}
+    <div class="modal" id="modal-{{ proj_id }}" role="dialog" aria-modal="true">
+      <div class="modal__backdrop"></div>
+      <div class="modal__box">
+        <div class="modal__header">
+          <div>
+            <h2 class="modal__title">{{ project.name }}</h2>
+            <p class="modal__sub">
+              {% for tag in project.tags %}<span class="tag">{{ tag }}</span> {% endfor %}
+            </p>
+          </div>
+          <button class="modal__close" aria-label="Fermer"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="modal__body">
+          {% for block in project.details %}
+            {% if block.type == "text" %}
+            <p class="modal__text">{{ block.content }}</p>
+            {% elsif block.type == "images" %}
+            <div class="modal__images modal__images--{{ block.items | size }}">
+              {% for img in block.items %}
+              <figure class="project__figure">
+                <img src="{{ img.src }}" alt="{{ img.alt }}" loading="lazy">
+                {% if img.caption %}<figcaption>{{ img.caption }}</figcaption>{% endif %}
+              </figure>
+              {% endfor %}
+            </div>
+            {% endif %}
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+    {% endif %}
+
+    {% endfor %}
   </div>
 </section>
 
@@ -165,9 +244,7 @@ layout: default
       <div class="skill-block reveal">
         <h3 class="skill-block__cat">{{ skill_group.category }}</h3>
         <div class="skill-block__items">
-          {% for item in skill_group.items %}
-          <span class="skill-pill">{{ item }}</span>
-          {% endfor %}
+          {% for item in skill_group.items %}<span class="skill-pill">{{ item }}</span>{% endfor %}
         </div>
       </div>
       {% endfor %}

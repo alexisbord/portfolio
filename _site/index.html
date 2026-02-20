@@ -79,15 +79,25 @@
     </div>
     <div class="timeline">
       
+      
       <article class="timeline__item reveal">
         <div class="timeline__marker"></div>
-        <div class="timeline__card">
+        <div class="timeline__card is-clickable"
+          data-modal="développeur-full-stack-senior">
           <div class="timeline__header">
-            <div>
-              <h3 class="timeline__role">Développeur Full Stack Senior</h3>
-              <p class="timeline__company">TechCorp Paris</p>
+            <div class="entity-info">
+              
+              <img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg" alt="TechCorp Paris" class="entity-logo">
+              
+              <div>
+                <h3 class="timeline__role">Développeur Full Stack Senior</h3>
+                <p class="timeline__company">TechCorp Paris</p>
+              </div>
             </div>
-            <span class="timeline__period">2022 — Présent</span>
+            <div class="timeline__header-right">
+              <span class="timeline__period">2022 — Présent</span>
+              <span class="card-hint"><i class="fas fa-expand-alt"></i> Détails</span>
+            </div>
           </div>
           <p class="timeline__desc">Conception et développement d'applications web scalables. Leadership technique d'une équipe de 5 développeurs. Migration vers une architecture microservices.</p>
           
@@ -95,81 +105,196 @@
             
             <figure class="project__figure">
               <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=700&q=80" alt="Équipe de développement" loading="lazy">
-              
+              <figcaption>Équipe de développement</figcaption>
             </figure>
             
             <figure class="project__figure">
               <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=700&q=80" alt="Dashboard analytique" loading="lazy">
-              <figcaption>Légende optionnelle plus détaillée</figcaption>
+              <figcaption>Dashboard analytique</figcaption>
             </figure>
             
           </div>
           
           <div class="tags">
-            
-            <span class="tag">React</span>
-            
-            <span class="tag">Node.js</span>
-            
-            <span class="tag">PostgreSQL</span>
-            
-            <span class="tag">Docker</span>
-            
+            <span class="tag">React</span><span class="tag">Node.js</span><span class="tag">PostgreSQL</span><span class="tag">Docker</span>
           </div>
         </div>
       </article>
+
+      
+      <div class="modal" id="modal-développeur-full-stack-senior" role="dialog" aria-modal="true">
+        <div class="modal__backdrop"></div>
+        <div class="modal__box">
+          <div class="modal__header">
+            <div class="entity-info">
+              
+              <img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg" alt="TechCorp Paris" class="entity-logo entity-logo--lg">
+              
+              <div>
+                <h2 class="modal__title">Développeur Full Stack Senior</h2>
+                <p class="modal__sub">TechCorp Paris · 2022 — Présent</p>
+              </div>
+            </div>
+            <button class="modal__close" aria-label="Fermer"><i class="fas fa-times"></i></button>
+          </div>
+          <div class="modal__body">
+            
+              
+              <p class="modal__text">En rejoignant TechCorp Paris en 2022, j'ai pris la tête technique d'une équipe de 5 développeurs pour refondre l'infrastructure backend de l'application principale, qui supportait alors 50 000 utilisateurs actifs.</p>
+              
+            
+              
+              <p class="modal__text">Le projet phare a été la migration d'une architecture monolithique vers des microservices Docker orchestrés via Kubernetes. Cette transition a réduit le temps de déploiement de 45 minutes à moins de 3 minutes, et amélioré la disponibilité de 97,2% à 99,8%.</p>
+              
+            
+              
+              <div class="modal__images modal__images--2">
+                
+                <figure class="project__figure">
+                  <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=900&q=80" alt="Réunion d'équipe technique" loading="lazy">
+                  <figcaption>Sprint planning hebdomadaire</figcaption>
+                </figure>
+                
+                <figure class="project__figure">
+                  <img src="https://images.unsplash.com/photo-1605379399642-870262d3d051?w=900&q=80" alt="Architecture microservices" loading="lazy">
+                  <figcaption>Schéma d'architecture cible</figcaption>
+                </figure>
+                
+              </div>
+              
+            
+              
+              <p class="modal__text">J'ai également introduit des pratiques de code review systématiques et une pipeline CI/CD complète avec tests automatisés, réduisant le taux de bugs en production de 60%.</p>
+              
+            
+          </div>
+        </div>
+      </div>
+      
+
+      
       
       <article class="timeline__item reveal">
         <div class="timeline__marker"></div>
-        <div class="timeline__card">
+        <div class="timeline__card is-clickable"
+          data-modal="développeur-front-end">
           <div class="timeline__header">
-            <div>
-              <h3 class="timeline__role">Développeur Front-End</h3>
-              <p class="timeline__company">Agence Créative Studio</p>
+            <div class="entity-info">
+              
+              <div>
+                <h3 class="timeline__role">Développeur Front-End</h3>
+                <p class="timeline__company">Agence Créative Studio</p>
+              </div>
             </div>
-            <span class="timeline__period">2019 — 2022</span>
+            <div class="timeline__header-right">
+              <span class="timeline__period">2019 — 2022</span>
+              <span class="card-hint"><i class="fas fa-expand-alt"></i> Détails</span>
+            </div>
           </div>
           <p class="timeline__desc">Développement d'interfaces utilisateur modernes pour des clients grands comptes. Mise en place d'un design system partagé.</p>
           
           <div class="tags">
-            
-            <span class="tag">Vue.js</span>
-            
-            <span class="tag">TypeScript</span>
-            
-            <span class="tag">SCSS</span>
-            
-            <span class="tag">Figma</span>
-            
+            <span class="tag">Vue.js</span><span class="tag">TypeScript</span><span class="tag">SCSS</span><span class="tag">Figma</span>
           </div>
         </div>
       </article>
+
+      
+      <div class="modal" id="modal-développeur-front-end" role="dialog" aria-modal="true">
+        <div class="modal__backdrop"></div>
+        <div class="modal__box">
+          <div class="modal__header">
+            <div class="entity-info">
+              
+              <div>
+                <h2 class="modal__title">Développeur Front-End</h2>
+                <p class="modal__sub">Agence Créative Studio · 2019 — 2022</p>
+              </div>
+            </div>
+            <button class="modal__close" aria-label="Fermer"><i class="fas fa-times"></i></button>
+          </div>
+          <div class="modal__body">
+            
+              
+              <p class="modal__text">Au sein de l'Agence Créative Studio, j'ai travaillé sur une dizaine de projets pour des clients comme L'Oréal, Decathlon et BNP Paribas. Mon rôle était de transformer les maquettes Figma en interfaces web performantes et accessibles.</p>
+              
+            
+              
+              <div class="modal__images modal__images--1">
+                
+                <figure class="project__figure">
+                  <img src="https://images.unsplash.com/photo-1561070791-2526d30994b5?w=900&q=80" alt="Design system" loading="lazy">
+                  <figcaption>Composants du design system</figcaption>
+                </figure>
+                
+              </div>
+              
+            
+              
+              <p class="modal__text">L'initiative dont je suis le plus fier est la création d'un design system partagé entre toutes les équipes, composé de plus de 80 composants Vue.js documentés sous Storybook. Cela a divisé par deux le temps de démarrage des nouveaux projets.</p>
+              
+            
+          </div>
+        </div>
+      </div>
+      
+
+      
       
       <article class="timeline__item reveal">
         <div class="timeline__marker"></div>
-        <div class="timeline__card">
+        <div class="timeline__card is-clickable"
+          data-modal="développeur-web-junior">
           <div class="timeline__header">
-            <div>
-              <h3 class="timeline__role">Développeur Web Junior</h3>
-              <p class="timeline__company">StartupXYZ</p>
+            <div class="entity-info">
+              
+              <div>
+                <h3 class="timeline__role">Développeur Web Junior</h3>
+                <p class="timeline__company">StartupXYZ</p>
+              </div>
             </div>
-            <span class="timeline__period">2017 — 2019</span>
+            <div class="timeline__header-right">
+              <span class="timeline__period">2017 — 2019</span>
+              <span class="card-hint"><i class="fas fa-expand-alt"></i> Détails</span>
+            </div>
           </div>
           <p class="timeline__desc">Développement et maintenance de l'application web principale. Intégration d'APIs tierces et optimisation des performances.</p>
           
           <div class="tags">
-            
-            <span class="tag">JavaScript</span>
-            
-            <span class="tag">PHP</span>
-            
-            <span class="tag">MySQL</span>
-            
-            <span class="tag">Git</span>
-            
+            <span class="tag">JavaScript</span><span class="tag">PHP</span><span class="tag">MySQL</span><span class="tag">Git</span>
           </div>
         </div>
       </article>
+
+      
+      <div class="modal" id="modal-développeur-web-junior" role="dialog" aria-modal="true">
+        <div class="modal__backdrop"></div>
+        <div class="modal__box">
+          <div class="modal__header">
+            <div class="entity-info">
+              
+              <div>
+                <h2 class="modal__title">Développeur Web Junior</h2>
+                <p class="modal__sub">StartupXYZ · 2017 — 2019</p>
+              </div>
+            </div>
+            <button class="modal__close" aria-label="Fermer"><i class="fas fa-times"></i></button>
+          </div>
+          <div class="modal__body">
+            
+              
+              <p class="modal__text">Mon premier poste m'a plongé dans un environnement startup dynamique. J'ai été responsable du développement de nouvelles fonctionnalités sur l'application SaaS principale, utilisée par environ 2 000 clients PME.</p>
+              
+            
+              
+              <p class="modal__text">Une mission clé a été l'intégration de plusieurs APIs tierces (Stripe, Mailchimp, Zapier) et l'optimisation de la base de données MySQL, réduisant les temps de chargement de 4s à moins de 800ms.</p>
+              
+            
+          </div>
+        </div>
+      </div>
+      
+
       
     </div>
   </div>
@@ -191,8 +316,15 @@
           <div class="edu-item__dot"></div>
         </div>
         <div class="edu-item__right">
-          <h3 class="edu-item__degree">Master Informatique — Génie Logiciel</h3>
-          <p class="edu-item__school"><i class="fas fa-map-marker-alt"></i> Université Pierre et Marie Curie</p>
+          <div class="entity-info">
+            
+            <img src="https://upload.wikimedia.org/wikipedia/fr/thumb/5/51/Sorbonne_Universit%C3%A9_-_Lettres_logo_2018.svg/200px-Sorbonne_Universit%C3%A9_-_Lettres_logo_2018.svg.png" alt="Université Pierre et Marie Curie" class="entity-logo">
+            
+            <div>
+              <h3 class="edu-item__degree">Master Informatique — Génie Logiciel</h3>
+              <p class="edu-item__school"><i class="fas fa-map-marker-alt"></i> Université Pierre et Marie Curie</p>
+            </div>
+          </div>
           <p class="edu-item__desc">Spécialisation en architecture logicielle et développement web. Mention très bien. Mémoire sur l'optimisation des Single Page Applications.</p>
         </div>
       </article>
@@ -203,8 +335,13 @@
           <div class="edu-item__dot"></div>
         </div>
         <div class="edu-item__right">
-          <h3 class="edu-item__degree">Licence Informatique</h3>
-          <p class="edu-item__school"><i class="fas fa-map-marker-alt"></i> IUT de Montpellier</p>
+          <div class="entity-info">
+            
+            <div>
+              <h3 class="edu-item__degree">Licence Informatique</h3>
+              <p class="edu-item__school"><i class="fas fa-map-marker-alt"></i> IUT de Montpellier</p>
+            </div>
+          </div>
           <p class="edu-item__desc">Formation généraliste en informatique couvrant algorithmique, base de données, réseaux et développement logiciel.</p>
         </div>
       </article>
@@ -215,8 +352,13 @@
           <div class="edu-item__dot"></div>
         </div>
         <div class="edu-item__right">
-          <h3 class="edu-item__degree">Certifications</h3>
-          <p class="edu-item__school"><i class="fas fa-map-marker-alt"></i> Diverses</p>
+          <div class="entity-info">
+            
+            <div>
+              <h3 class="edu-item__degree">Certifications</h3>
+              <p class="edu-item__school"><i class="fas fa-map-marker-alt"></i> Diverses</p>
+            </div>
+          </div>
           <p class="edu-item__desc">AWS Certified Developer (2023), Google Professional Cloud Developer (2022), MongoDB Associate Developer (2021).</p>
         </div>
       </article>
@@ -235,152 +377,256 @@
     </div>
 
     
-    <article class="project reveal">
+    
+    <article class="project reveal is-clickable"
+      data-modal="projet-1-devflow">
       <div class="project__header">
-        <h3 class="project__name">Projet #1 — DevFlow</h3>
+        <div class="project__title-row">
+          <h3 class="project__name">Projet #1 — DevFlow</h3>
+          <span class="card-hint"><i class="fas fa-expand-alt"></i> Lire plus</span>
+        </div>
         <div class="project__links">
-          <a href="#" class="btn btn--ghost btn--sm" target="_blank" rel="noopener"><i class="fas fa-external-link-alt"></i> Demo</a>
-          <a href="#" class="btn btn--ghost btn--sm" target="_blank" rel="noopener"><i class="fab fa-github"></i> Code</a>
+          <a href="#" class="btn btn--ghost btn--sm" target="_blank" rel="noopener" onclick="event.stopPropagation()"><i class="fas fa-external-link-alt"></i> Demo</a>
+          <a href="#" class="btn btn--ghost btn--sm" target="_blank" rel="noopener" onclick="event.stopPropagation()"><i class="fab fa-github"></i> Code</a>
         </div>
       </div>
-
-      
-      <p class="project__text">Dans le cadre de mon master à l'Université Paris Saclay, j'ai développé une plateforme de gestion de projets agiles pour répondre aux besoins des équipes de développement distribuées.</p>
-      
-
-      
+      <p class="project__text">Dans le cadre de mon master à l'Université Paris Saclay, j'ai développé une plateforme de gestion de projets agiles pour répondre aux besoins des équipes distribuées.</p>
       <p class="project__text"><strong>Objectif :</strong> Concevoir et implémenter une application web temps réel permettant la collaboration synchrone entre équipes, avec gestion des sprints, tableaux Kanban et métriques de vélocité.</p>
-      
-
       
       <div class="project__images project__images--2">
         
         <figure class="project__figure">
           <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?w=700&q=80" alt="Interface principale DevFlow" loading="lazy">
-          
+          <figcaption>Interface principale DevFlow</figcaption>
         </figure>
         
         <figure class="project__figure">
           <img src="https://images.unsplash.com/photo-1507925921958-8a62f3d1a50d?w=700&q=80" alt="Tableau Kanban en temps réel" loading="lazy">
-          
+          <figcaption>Tableau Kanban en temps réel</figcaption>
         </figure>
         
       </div>
       
-
       
-      <p class="project__text project__text--result"><i class="fas fa-chart-line"></i> <strong>Résultat :</strong> L'application a été adoptée par 3 équipes internes lors du projet, avec une réduction mesurée de 30% du temps de coordination lors des cérémonies agiles.</p>
+      <p class="project__text project__text--result"><i class="fas fa-chart-line"></i> <strong>Résultat :</strong> L'application a été adoptée par 3 équipes internes, avec une réduction mesurée de 30% du temps de coordination lors des cérémonies agiles.</p>
       
-
       <div class="tags">
-        
-        <span class="tag">React</span>
-        
-        <span class="tag">Socket.io</span>
-        
-        <span class="tag">Node.js</span>
-        
-        <span class="tag">MongoDB</span>
-        
+        <span class="tag">React</span><span class="tag">Socket.io</span><span class="tag">Node.js</span><span class="tag">MongoDB</span>
       </div>
     </article>
+
     
-    <article class="project reveal">
-      <div class="project__header">
-        <h3 class="project__name">Projet #2 — WeatherScope</h3>
-        <div class="project__links">
-          <a href="#" class="btn btn--ghost btn--sm" target="_blank" rel="noopener"><i class="fas fa-external-link-alt"></i> Demo</a>
-          <a href="#" class="btn btn--ghost btn--sm" target="_blank" rel="noopener"><i class="fab fa-github"></i> Code</a>
+    <div class="modal" id="modal-projet-1-devflow" role="dialog" aria-modal="true">
+      <div class="modal__backdrop"></div>
+      <div class="modal__box">
+        <div class="modal__header">
+          <div>
+            <h2 class="modal__title">Projet #1 — DevFlow</h2>
+            <p class="modal__sub">
+              <span class="tag">React</span> <span class="tag">Socket.io</span> <span class="tag">Node.js</span> <span class="tag">MongoDB</span> 
+            </p>
+          </div>
+          <button class="modal__close" aria-label="Fermer"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="modal__body">
+          
+            
+            <p class="modal__text">DevFlow est né d'un constat simple : les outils de gestion de projet existants sont soit trop lourds, soit trop limités pour les petites équipes agiles. L'objectif était de créer un outil minimaliste mais puissant.</p>
+            
+          
+            
+            <div class="modal__images modal__images--2">
+              
+              <figure class="project__figure">
+                <img src="https://images.unsplash.com/photo-1531403009284-440f080d1e12?w=900&q=80" alt="Tableau Kanban DevFlow" loading="lazy">
+                <figcaption>Vue Kanban avec drag & drop</figcaption>
+              </figure>
+              
+              <figure class="project__figure">
+                <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=900&q=80" alt="Dashboard métriques" loading="lazy">
+                <figcaption>Dashboard de vélocité d'équipe</figcaption>
+              </figure>
+              
+            </div>
+            
+          
+            
+            <p class="modal__text">L'architecture repose sur React + Redux côté client et Node.js + Socket.io côté serveur pour la synchronisation temps réel. La grande difficulté technique a été la gestion des conflits lors d'éditions simultanées, résolue via un système de verrous optimistes.</p>
+            
+          
+            
+            <div class="modal__images modal__images--1">
+              
+              <figure class="project__figure">
+                <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=900&q=80" alt="Code source DevFlow" loading="lazy">
+                <figcaption>Extrait du code backend</figcaption>
+              </figure>
+              
+            </div>
+            
+          
         </div>
       </div>
+    </div>
+    
 
-      
+    
+    
+    <article class="project reveal is-clickable"
+      data-modal="projet-2-weatherscope">
+      <div class="project__header">
+        <div class="project__title-row">
+          <h3 class="project__name">Projet #2 — WeatherScope</h3>
+          <span class="card-hint"><i class="fas fa-expand-alt"></i> Lire plus</span>
+        </div>
+        <div class="project__links">
+          <a href="#" class="btn btn--ghost btn--sm" target="_blank" rel="noopener" onclick="event.stopPropagation()"><i class="fas fa-external-link-alt"></i> Demo</a>
+          <a href="#" class="btn btn--ghost btn--sm" target="_blank" rel="noopener" onclick="event.stopPropagation()"><i class="fab fa-github"></i> Code</a>
+        </div>
+      </div>
       <p class="project__text">Application météo PWA développée en autonomie pour explorer les possibilités des Progressive Web Apps et des APIs de données environnementales.</p>
-      
-
-      
       <p class="project__text"><strong>Objectif :</strong> Fournir des prévisions hyper-locales avec visualisation de données interactives, support offline complet et notifications push pour les alertes météo sévères.</p>
-      
-
       
       <div class="project__images project__images--2">
         
         <figure class="project__figure">
           <img src="https://images.unsplash.com/photo-1504608524841-42584120d693?w=700&q=80" alt="Visualisation météo interactive" loading="lazy">
-          
+          <figcaption>Visualisation météo interactive</figcaption>
         </figure>
         
         <figure class="project__figure">
           <img src="https://images.unsplash.com/photo-1561484930-998b6a7b22e8?w=700&q=80" alt="Dashboard mobile WeatherScope" loading="lazy">
-          
+          <figcaption>Dashboard mobile WeatherScope</figcaption>
         </figure>
         
       </div>
       
-
       
-      <p class="project__text project__text--result"><i class="fas fa-chart-line"></i> <strong>Résultat :</strong> Application publiée avec 500+ utilisateurs actifs, score Lighthouse 97/100, et sélectionnée comme exemple de bonnes pratiques PWA dans un article Medium.</p>
+      <p class="project__text project__text--result"><i class="fas fa-chart-line"></i> <strong>Résultat :</strong> 500+ utilisateurs actifs, score Lighthouse 97/100, sélectionnée comme exemple de bonnes pratiques PWA dans un article Medium.</p>
       
-
       <div class="tags">
-        
-        <span class="tag">Vue.js</span>
-        
-        <span class="tag">D3.js</span>
-        
-        <span class="tag">OpenWeather API</span>
-        
-        <span class="tag">PWA</span>
-        
+        <span class="tag">Vue.js</span><span class="tag">D3.js</span><span class="tag">OpenWeather API</span><span class="tag">PWA</span>
       </div>
     </article>
+
     
-    <article class="project reveal">
-      <div class="project__header">
-        <h3 class="project__name">Projet #3 — CLI DevTools</h3>
-        <div class="project__links">
-          <a href="#" class="btn btn--ghost btn--sm" target="_blank" rel="noopener"><i class="fas fa-external-link-alt"></i> Demo</a>
-          <a href="#" class="btn btn--ghost btn--sm" target="_blank" rel="noopener"><i class="fab fa-github"></i> Code</a>
+    <div class="modal" id="modal-projet-2-weatherscope" role="dialog" aria-modal="true">
+      <div class="modal__backdrop"></div>
+      <div class="modal__box">
+        <div class="modal__header">
+          <div>
+            <h2 class="modal__title">Projet #2 — WeatherScope</h2>
+            <p class="modal__sub">
+              <span class="tag">Vue.js</span> <span class="tag">D3.js</span> <span class="tag">OpenWeather API</span> <span class="tag">PWA</span> 
+            </p>
+          </div>
+          <button class="modal__close" aria-label="Fermer"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="modal__body">
+          
+            
+            <p class="modal__text">WeatherScope est parti d'une frustration personnelle : les applications météo existantes affichent trop d'informations inutiles. J'ai voulu créer une interface épurée centrée sur l'essentiel.</p>
+            
+          
+            
+            <div class="modal__images modal__images--2">
+              
+              <figure class="project__figure">
+                <img src="https://images.unsplash.com/photo-1504608524841-42584120d693?w=900&q=80" alt="Interface WeatherScope" loading="lazy">
+                <figcaption>Vue principale avec prévisions 7 jours</figcaption>
+              </figure>
+              
+              <figure class="project__figure">
+                <img src="https://images.unsplash.com/photo-1561484930-998b6a7b22e8?w=900&q=80" alt="Visualisations D3.js" loading="lazy">
+                <figcaption>Graphiques de précipitations en D3.js</figcaption>
+              </figure>
+              
+            </div>
+            
+          
+            
+            <p class="modal__text">Les visualisations D3.js ont été la partie la plus technique. J'ai développé des graphiques animés pour les courbes de température et les roses des vents, optimisés pour fonctionner parfaitement sur mobile.</p>
+            
+          
         </div>
       </div>
+    </div>
+    
 
-      
+    
+    
+    <article class="project reveal is-clickable"
+      data-modal="projet-3-cli-devtools">
+      <div class="project__header">
+        <div class="project__title-row">
+          <h3 class="project__name">Projet #3 — CLI DevTools</h3>
+          <span class="card-hint"><i class="fas fa-expand-alt"></i> Lire plus</span>
+        </div>
+        <div class="project__links">
+          <a href="#" class="btn btn--ghost btn--sm" target="_blank" rel="noopener" onclick="event.stopPropagation()"><i class="fas fa-external-link-alt"></i> Demo</a>
+          <a href="#" class="btn btn--ghost btn--sm" target="_blank" rel="noopener" onclick="event.stopPropagation()"><i class="fab fa-github"></i> Code</a>
+        </div>
+      </div>
       <p class="project__text">Suite d'outils open source créée pour automatiser les tâches répétitives du workflow développeur, initialement pour un usage personnel puis partagée sur GitHub.</p>
-      
-
-      
       <p class="project__text"><strong>Objectif :</strong> Proposer un ensemble d'utilitaires CLI modulaires couvrant la génération de boilerplate, la gestion de secrets, le scaffolding de projets et les helpers Git.</p>
-      
-
       
       <div class="project__images project__images--1">
         
         <figure class="project__figure">
           <img src="https://images.unsplash.com/photo-1629654297299-c8506221ca97?w=700&q=80" alt="Terminal CLI DevTools" loading="lazy">
-          
+          <figcaption>Terminal CLI DevTools</figcaption>
         </figure>
         
       </div>
       
-
       
-      <p class="project__text project__text--result"><i class="fas fa-chart-line"></i> <strong>Résultat :</strong> Plus de 1 200 étoiles sur GitHub, 40+ contributeurs externes, packagé sur PyPI avec 8 000+ téléchargements mensuels.</p>
+      <p class="project__text project__text--result"><i class="fas fa-chart-line"></i> <strong>Résultat :</strong> 1 200+ étoiles sur GitHub, 40+ contributeurs externes, packagé sur PyPI avec 8 000+ téléchargements mensuels.</p>
       
-
       <div class="tags">
-        
-        <span class="tag">Python</span>
-        
-        <span class="tag">Click</span>
-        
-        <span class="tag">Rich</span>
-        
-        <span class="tag">Docker</span>
-        
+        <span class="tag">Python</span><span class="tag">Click</span><span class="tag">Rich</span><span class="tag">Docker</span>
       </div>
     </article>
+
+    
+    <div class="modal" id="modal-projet-3-cli-devtools" role="dialog" aria-modal="true">
+      <div class="modal__backdrop"></div>
+      <div class="modal__box">
+        <div class="modal__header">
+          <div>
+            <h2 class="modal__title">Projet #3 — CLI DevTools</h2>
+            <p class="modal__sub">
+              <span class="tag">Python</span> <span class="tag">Click</span> <span class="tag">Rich</span> <span class="tag">Docker</span> 
+            </p>
+          </div>
+          <button class="modal__close" aria-label="Fermer"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="modal__body">
+          
+            
+            <p class="modal__text">CLI DevTools a commencé comme une collection de scripts bash personnels avant d'évoluer en une suite Python structurée. La réécriture avec Click a permis d'ajouter une documentation automatique et une gestion des erreurs robuste.</p>
+            
+          
+            
+            <div class="modal__images modal__images--1">
+              
+              <figure class="project__figure">
+                <img src="https://images.unsplash.com/photo-1629654297299-c8506221ca97?w=900&q=80" alt="CLI en action" loading="lazy">
+                <figcaption>Interface Rich avec couleurs et progress bars</figcaption>
+              </figure>
+              
+            </div>
+            
+          
+            
+            <p class="modal__text">Le projet a pris une dimension inattendue après un post sur Reddit. En une semaine, le repo est passé de 12 à 800 étoiles. Gérer cette communauté soudaine a été une expérience très formatrice sur la gestion open source.</p>
+            
+          
+        </div>
+      </div>
+    </div>
     
 
+    
   </div>
 </section>
 
@@ -397,63 +643,21 @@
       <div class="skill-block reveal">
         <h3 class="skill-block__cat">Front-End</h3>
         <div class="skill-block__items">
-          
-          <span class="skill-pill">React</span>
-          
-          <span class="skill-pill">Vue.js</span>
-          
-          <span class="skill-pill">TypeScript</span>
-          
-          <span class="skill-pill">HTML/CSS</span>
-          
-          <span class="skill-pill">SCSS</span>
-          
-          <span class="skill-pill">Tailwind</span>
-          
-          <span class="skill-pill">D3.js</span>
-          
+          <span class="skill-pill">React</span><span class="skill-pill">Vue.js</span><span class="skill-pill">TypeScript</span><span class="skill-pill">HTML/CSS</span><span class="skill-pill">SCSS</span><span class="skill-pill">Tailwind</span><span class="skill-pill">D3.js</span>
         </div>
       </div>
       
       <div class="skill-block reveal">
         <h3 class="skill-block__cat">Back-End</h3>
         <div class="skill-block__items">
-          
-          <span class="skill-pill">Node.js</span>
-          
-          <span class="skill-pill">Python</span>
-          
-          <span class="skill-pill">PHP</span>
-          
-          <span class="skill-pill">REST APIs</span>
-          
-          <span class="skill-pill">GraphQL</span>
-          
-          <span class="skill-pill">PostgreSQL</span>
-          
-          <span class="skill-pill">MongoDB</span>
-          
+          <span class="skill-pill">Node.js</span><span class="skill-pill">Python</span><span class="skill-pill">PHP</span><span class="skill-pill">REST APIs</span><span class="skill-pill">GraphQL</span><span class="skill-pill">PostgreSQL</span><span class="skill-pill">MongoDB</span>
         </div>
       </div>
       
       <div class="skill-block reveal">
         <h3 class="skill-block__cat">DevOps & Tools</h3>
         <div class="skill-block__items">
-          
-          <span class="skill-pill">Docker</span>
-          
-          <span class="skill-pill">AWS</span>
-          
-          <span class="skill-pill">Git</span>
-          
-          <span class="skill-pill">CI/CD</span>
-          
-          <span class="skill-pill">Linux</span>
-          
-          <span class="skill-pill">Nginx</span>
-          
-          <span class="skill-pill">Figma</span>
-          
+          <span class="skill-pill">Docker</span><span class="skill-pill">AWS</span><span class="skill-pill">Git</span><span class="skill-pill">CI/CD</span><span class="skill-pill">Linux</span><span class="skill-pill">Nginx</span><span class="skill-pill">Figma</span>
         </div>
       </div>
       
