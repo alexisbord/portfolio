@@ -1,3 +1,21 @@
+// ── Hero — fade + parallax au scroll ─────────────────────────
+const heroImg     = document.getElementById('heroImg');
+const heroSection = document.getElementById('hero');
+
+if (heroImg && heroSection) {
+  window.addEventListener('scroll', () => {
+    const scrollY  = window.scrollY;
+    const heroH    = heroSection.offsetHeight;
+
+    // Opacité : 1 → 0 sur la première moitié du scroll
+    const fadeRatio = Math.min(scrollY / (heroH * 0.6), 1);
+    heroImg.style.opacity = 1 - fadeRatio;
+
+    // Parallax léger : l'image monte plus lentement que le scroll
+    heroImg.style.transform = `translateY(${scrollY * 0.3}px)`;
+  }, { passive: true });
+}
+
 // ── Navbar scroll effect ──────────────────────────────────────
 const navbar = document.getElementById('navbar');
 window.addEventListener('scroll', () => {
@@ -91,3 +109,17 @@ document.addEventListener('keydown', e => {
     document.querySelectorAll('.modal.is-open').forEach(closeModal);
   }
 });
+
+// ── Hero scroll button ───────────────────────────────────────
+const heroScrollBtn = document.querySelector('.hero__scroll');
+
+if (heroScrollBtn) {
+  heroScrollBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+
+    window.scrollBy({
+      top: window.innerHeight * 1, // ajuste ici (0.8, 1, 1.2...)
+      behavior: 'smooth'
+    });
+  });
+}

@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>John Doe — Portfolio</title>
-  <meta name="description" content="Développeur Full Stack & Designer">
+  <title>Alexis Bord — Portfolio</title>
+  <meta name="description" content="Étudiant en data et intelligence artificielle">
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
-
+  <!-- <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet"> -->
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;800&display=swap" rel="stylesheet">
   <!-- Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
@@ -20,8 +20,8 @@
 <body>
   <header class="navbar" id="navbar">
   <div class="navbar__container">
-    <a href="#hero" class="navbar__logo">John Doe</a>
-    
+    <a href="#hero" class="navbar__logo">Alexis Bord</a>
+
     <button class="navbar__toggle" id="navToggle" aria-label="Menu">
       <span></span>
       <span></span>
@@ -30,50 +30,78 @@
 
     <nav class="navbar__nav" id="navMenu">
       <ul>
+        <li><a href="#apropos" class="nav-link">À propos</a></li>
         <li><a href="#experience" class="nav-link">Expérience</a></li>
         <li><a href="#formation" class="nav-link">Formation</a></li>
         <li><a href="#projets" class="nav-link">Projets</a></li>
-        <li><a href="#competences" class="nav-link">Compétences</a></li>
-        <li><a href="#contact" class="nav-link nav-link--cta">Contact</a></li>
+        <li><a href="mailto:alexis.bord094@gmail.com" class="nav-link nav-link--cta">Contact</a></li>
       </ul>
     </nav>
-  </div>
-</header>
 
-  <main>
-    <!-- HERO -->
-<section class="hero" id="hero">
-  <div class="hero__bg"></div>
-  <div class="col-center">
-    <div class="hero__inner">
-      <div class="hero__text">
-        <span class="hero__badge">Disponible pour de nouveaux projets</span>
-        <h1 class="hero__name">John Doe</h1>
-        <p class="hero__title">Développeur Full Stack & Designer</p>
-        <p class="hero__bio">Passionné par la création d'expériences web performantes et accessibles. Je transforme des idées complexes en interfaces élégantes et robustes.</p>
-        <div class="hero__actions">
-          <a href="#projets" class="btn btn--primary">Voir mes projets</a>
-          <a href="#contact" class="btn btn--ghost">Me contacter</a>
-        </div>
-      </div>
-      <div class="hero__visual">
-        <div class="hero__avatar">
-          <img src="https://avatars.githubusercontent.com/u/583231?v=4" alt="John Doe" loading="lazy">
-        </div>
-        <div class="hero__dots"></div>
-      </div>
+    <div class="navbar__social">
+      
+      <a href="https://github.com/alexisbord" target="_blank" rel="noopener" aria-label="GitHub" class="navbar__social-link">
+        <i class="fab fa-github"></i>
+      </a>
+      
+      
+      <a href="https://linkedin.com/in/alexis-bord/" target="_blank" rel="noopener" aria-label="LinkedIn" class="navbar__social-link">
+        <i class="fab fa-linkedin-in"></i>
+      </a>
+      
     </div>
   </div>
-  <a href="#experience" class="hero__scroll" aria-label="Défiler vers le bas">
+</header>
+  <main>
+    <!-- ═══════════════════════════════════════════════════════════
+     ACCUEIL (plein écran, image de fond)
+     ═══════════════════════════════════════════════════════════ -->
+<section class="hero" id="hero">
+  <div class="hero__img" id="heroImg"></div>
+  <div class="hero__overlay"></div>
+  <div class="hero__content">
+    <h1 class="hero__name">Recherche <br /> de stage
+</h1>
+    <p class="hero__subtitle">Étudiant en data et intelligence artificielle</p>
+    <p class="hero__tagline">6 mois à partir de mai</p>
+  </div>
+  <a href="#apropos" class="hero__scroll" aria-label="Défiler vers le bas">
     <i class="fas fa-chevron-down"></i>
   </a>
 </section>
 
-<!-- EXPERIENCE -->
-<section class="section section--alt" id="experience">
+<!-- ═══════════════════════════════════════════════════════════
+     À PROPOS
+     ═══════════════════════════════════════════════════════════ -->
+<section class="section" id="apropos">
   <div class="col-center">
     <div class="section-header">
       <span class="section-label">01</span>
+      <h2 class="section-title">À propos</h2>
+    </div>
+    <div class="about">
+      <div class="about__avatar">
+        <img src="https://avatars.githubusercontent.com/u/583231?v=4" alt="Alexis Bord" loading="lazy">
+        <div class="about__dots"></div>
+      </div>
+      <div class="about__content">
+        <p class="about__text"></p>
+        <div class="about__meta">
+          <span class="about__meta-item"><i class="fas fa-map-marker-alt"></i> Paris, France</span>
+          <span class="about__meta-item"><i class="fas fa-envelope"></i> alexis.bord094@gmail.com</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     EXPÉRIENCE
+     ═══════════════════════════════════════════════════════════ -->
+<section class="section section--alt" id="experience">
+  <div class="col-center">
+    <div class="section-header">
+      <span class="section-label">02</span>
       <h2 class="section-title">Expérience</h2>
       <p class="section-sub">Mon parcours professionnel</p>
     </div>
@@ -171,7 +199,6 @@
         </div>
       </div>
       
-
       
       
       <article class="timeline__item reveal">
@@ -238,7 +265,6 @@
         </div>
       </div>
       
-
       
       
       <article class="timeline__item reveal">
@@ -294,17 +320,18 @@
         </div>
       </div>
       
-
       
     </div>
   </div>
 </section>
 
-<!-- FORMATION -->
+<!-- ═══════════════════════════════════════════════════════════
+     FORMATION
+     ═══════════════════════════════════════════════════════════ -->
 <section class="section" id="formation">
   <div class="col-center">
     <div class="section-header">
-      <span class="section-label">02</span>
+      <span class="section-label">03</span>
       <h2 class="section-title">Formation</h2>
       <p class="section-sub">Mon parcours académique</p>
     </div>
@@ -367,11 +394,13 @@
   </div>
 </section>
 
-<!-- PROJETS -->
+<!-- ═══════════════════════════════════════════════════════════
+     PROJETS
+     ═══════════════════════════════════════════════════════════ -->
 <section class="section section--alt" id="projets">
   <div class="col-center">
     <div class="section-header">
-      <span class="section-label">03</span>
+      <span class="section-label">04</span>
       <h2 class="section-title">Projets</h2>
       <p class="section-sub">Quelques réalisations récentes</p>
     </div>
@@ -469,7 +498,6 @@
       </div>
     </div>
     
-
     
     
     <article class="project reveal is-clickable"
@@ -552,7 +580,6 @@
       </div>
     </div>
     
-
     
     
     <article class="project reveal is-clickable"
@@ -625,43 +652,7 @@
       </div>
     </div>
     
-
     
-  </div>
-</section>
-
-<!-- COMPÉTENCES -->
-<section class="section" id="competences">
-  <div class="col-center">
-    <div class="section-header">
-      <span class="section-label">04</span>
-      <h2 class="section-title">Compétences</h2>
-      <p class="section-sub">Technologies &amp; outils maîtrisés</p>
-    </div>
-    <div class="skills-grid">
-      
-      <div class="skill-block reveal">
-        <h3 class="skill-block__cat">Front-End</h3>
-        <div class="skill-block__items">
-          <span class="skill-pill">React</span><span class="skill-pill">Vue.js</span><span class="skill-pill">TypeScript</span><span class="skill-pill">HTML/CSS</span><span class="skill-pill">SCSS</span><span class="skill-pill">Tailwind</span><span class="skill-pill">D3.js</span>
-        </div>
-      </div>
-      
-      <div class="skill-block reveal">
-        <h3 class="skill-block__cat">Back-End</h3>
-        <div class="skill-block__items">
-          <span class="skill-pill">Node.js</span><span class="skill-pill">Python</span><span class="skill-pill">PHP</span><span class="skill-pill">REST APIs</span><span class="skill-pill">GraphQL</span><span class="skill-pill">PostgreSQL</span><span class="skill-pill">MongoDB</span>
-        </div>
-      </div>
-      
-      <div class="skill-block reveal">
-        <h3 class="skill-block__cat">DevOps & Tools</h3>
-        <div class="skill-block__items">
-          <span class="skill-pill">Docker</span><span class="skill-pill">AWS</span><span class="skill-pill">Git</span><span class="skill-pill">CI/CD</span><span class="skill-pill">Linux</span><span class="skill-pill">Nginx</span><span class="skill-pill">Figma</span>
-        </div>
-      </div>
-      
-    </div>
   </div>
 </section>
 
@@ -672,28 +663,24 @@
       <div class="footer__main">
         <h2 class="footer__title">Travaillons ensemble.</h2>
         <p class="footer__sub">Ouvert aux opportunités freelance & CDI</p>
-        <a href="mailto:john@example.com" class="footer__email">john@example.com</a>
+        <a href="mailto:alexis.bord094@gmail.com" class="footer__email">alexis.bord094@gmail.com</a>
       </div>
       <div class="footer__links">
         
-        <a href="https://github.com/johndoe" target="_blank" rel="noopener" aria-label="GitHub">
+        <a href="https://github.com/alexisbord" target="_blank" rel="noopener" aria-label="GitHub">
           <i class="fab fa-github"></i>
         </a>
         
         
-        <a href="https://linkedin.com/in/johndoe" target="_blank" rel="noopener" aria-label="LinkedIn">
+        <a href="https://linkedin.com/in/alexis-bord/" target="_blank" rel="noopener" aria-label="LinkedIn">
           <i class="fab fa-linkedin-in"></i>
         </a>
         
         
-        <a href="https://twitter.com/johndoe" target="_blank" rel="noopener" aria-label="Twitter">
-          <i class="fab fa-x-twitter"></i>
-        </a>
-        
       </div>
     </div>
     <div class="footer__bottom">
-      <p>© 2026 John Doe. Construit avec Jekyll &amp; ❤️</p>
+      <p>© 2026 Alexis Bord. Construit avec Jekyll &amp; ❤️</p>
     </div>
   </div>
 </footer>

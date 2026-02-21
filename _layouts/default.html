@@ -9,8 +9,8 @@
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
-
+  <!-- <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet"> -->
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;800&display=swap" rel="stylesheet">
   <!-- Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
@@ -18,7 +18,40 @@
   <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
 </head>
 <body>
-  {% include navbar.html %}
+  <header class="navbar" id="navbar">
+  <div class="navbar__container">
+    <a href="#hero" class="navbar__logo">{{ site.title }}</a>
+
+    <button class="navbar__toggle" id="navToggle" aria-label="Menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <nav class="navbar__nav" id="navMenu">
+      <ul>
+        <li><a href="#apropos" class="nav-link">À propos</a></li>
+        <li><a href="#experience" class="nav-link">Expérience</a></li>
+        <li><a href="#formation" class="nav-link">Formation</a></li>
+        <li><a href="#projets" class="nav-link">Projets</a></li>
+        <li><a href="mailto:alexis.bord094@gmail.com" class="nav-link nav-link--cta">Contact</a></li>
+      </ul>
+    </nav>
+
+    <div class="navbar__social">
+      {% if site.github %}
+      <a href="https://github.com/{{ site.github }}" target="_blank" rel="noopener" aria-label="GitHub" class="navbar__social-link">
+        <i class="fab fa-github"></i>
+      </a>
+      {% endif %}
+      {% if site.linkedin %}
+      <a href="https://linkedin.com/in/{{ site.linkedin }}" target="_blank" rel="noopener" aria-label="LinkedIn" class="navbar__social-link">
+        <i class="fab fa-linkedin-in"></i>
+      </a>
+      {% endif %}
+    </div>
+  </div>
+</header>
   <main>
     {{ content }}
   </main>

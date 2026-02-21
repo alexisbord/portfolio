@@ -1,9 +1,13 @@
-title: "John Doe"
-description: "Développeur Full Stack & Designer"
-email: "john@example.com"
-github: "johndoe"
-linkedin: "johndoe"
-twitter: "johndoe"
+title: "Alexis Bord"
+hero_title: "Recherche <br> de stage"   # Grand titre affiché sur l'image
+hero_tagline: "6 mois à partir de mai"
+hero_image: "dark_lab_cut.png"
+description: "Étudiant en data et intelligence artificielle"
+about: ""
+email: "alexis.bord094@gmail.com"
+location: "Paris, France"
+github: "alexisbord"
+linkedin: "alexis-bord/"
 
 # Build settings
 plugins:
@@ -14,10 +18,8 @@ sass:
   sass_dir: _sass
   style: compressed
 
-# Permalinks
 permalink: pretty
 
-# Exclude from processing
 exclude:
   - Gemfile
   - Gemfile.lock

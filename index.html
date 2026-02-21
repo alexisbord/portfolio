@@ -2,39 +2,54 @@
 layout: default
 ---
 
-<!-- HERO -->
+<!-- ═══════════════════════════════════════════════════════════
+     ACCUEIL (plein écran, image de fond)
+     ═══════════════════════════════════════════════════════════ -->
 <section class="hero" id="hero">
-  <div class="hero__bg"></div>
-  <div class="col-center">
-    <div class="hero__inner">
-      <div class="hero__text">
-        <span class="hero__badge">Disponible pour de nouveaux projets</span>
-        <h1 class="hero__name">{{ site.title }}</h1>
-        <p class="hero__title">{{ site.description }}</p>
-        <p class="hero__bio">Passionné par la création d'expériences web performantes et accessibles. Je transforme des idées complexes en interfaces élégantes et robustes.</p>
-        <div class="hero__actions">
-          <a href="#projets" class="btn btn--primary">Voir mes projets</a>
-          <a href="#contact" class="btn btn--ghost">Me contacter</a>
-        </div>
-      </div>
-      <div class="hero__visual">
-        <div class="hero__avatar">
-          <img src="https://avatars.githubusercontent.com/u/583231?v=4" alt="{{ site.title }}" loading="lazy">
-        </div>
-        <div class="hero__dots"></div>
-      </div>
-    </div>
+  <div class="hero__img" id="heroImg"></div>
+  <div class="hero__overlay"></div>
+  <div class="hero__content">
+    <h1 class="hero__name">{{ site.hero_title | default: site.title | markdownify | remove: '<p>' | remove: '</p>' }}</h1>
+    <p class="hero__subtitle">{{ site.description }}</p>
+    <p class="hero__tagline">{{ site.hero_tagline | default: "Ouvert aux opportunités" }}</p>
   </div>
-  <a href="#experience" class="hero__scroll" aria-label="Défiler vers le bas">
+  <a href="#apropos" class="hero__scroll" aria-label="Défiler vers le bas">
     <i class="fas fa-chevron-down"></i>
   </a>
 </section>
 
-<!-- EXPERIENCE -->
-<section class="section section--alt" id="experience">
+<!-- ═══════════════════════════════════════════════════════════
+     À PROPOS
+     ═══════════════════════════════════════════════════════════ -->
+<section class="section" id="apropos">
   <div class="col-center">
     <div class="section-header">
       <span class="section-label">01</span>
+      <h2 class="section-title">À propos</h2>
+    </div>
+    <div class="about">
+      <div class="about__avatar">
+        <img src="https://avatars.githubusercontent.com/u/583231?v=4" alt="{{ site.title }}" loading="lazy">
+        <div class="about__dots"></div>
+      </div>
+      <div class="about__content">
+        <p class="about__text">{{ site.about }}</p>
+        <div class="about__meta">
+          {% if site.location %}<span class="about__meta-item"><i class="fas fa-map-marker-alt"></i> {{ site.location }}</span>{% endif %}
+          {% if site.email %}<span class="about__meta-item"><i class="fas fa-envelope"></i> {{ site.email }}</span>{% endif %}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     EXPÉRIENCE
+     ═══════════════════════════════════════════════════════════ -->
+<section class="section section--alt" id="experience">
+  <div class="col-center">
+    <div class="section-header">
+      <span class="section-label">02</span>
       <h2 class="section-title">Expérience</h2>
       <p class="section-sub">Mon parcours professionnel</p>
     </div>
@@ -112,17 +127,18 @@ layout: default
         </div>
       </div>
       {% endif %}
-
       {% endfor %}
     </div>
   </div>
 </section>
 
-<!-- FORMATION -->
+<!-- ═══════════════════════════════════════════════════════════
+     FORMATION
+     ═══════════════════════════════════════════════════════════ -->
 <section class="section" id="formation">
   <div class="col-center">
     <div class="section-header">
-      <span class="section-label">02</span>
+      <span class="section-label">03</span>
       <h2 class="section-title">Formation</h2>
       <p class="section-sub">Mon parcours académique</p>
     </div>
@@ -151,11 +167,13 @@ layout: default
   </div>
 </section>
 
-<!-- PROJETS -->
+<!-- ═══════════════════════════════════════════════════════════
+     PROJETS
+     ═══════════════════════════════════════════════════════════ -->
 <section class="section section--alt" id="projets">
   <div class="col-center">
     <div class="section-header">
-      <span class="section-label">03</span>
+      <span class="section-label">04</span>
       <h2 class="section-title">Projets</h2>
       <p class="section-sub">Quelques réalisations récentes</p>
     </div>
@@ -226,28 +244,6 @@ layout: default
       </div>
     </div>
     {% endif %}
-
     {% endfor %}
-  </div>
-</section>
-
-<!-- COMPÉTENCES -->
-<section class="section" id="competences">
-  <div class="col-center">
-    <div class="section-header">
-      <span class="section-label">04</span>
-      <h2 class="section-title">Compétences</h2>
-      <p class="section-sub">Technologies &amp; outils maîtrisés</p>
-    </div>
-    <div class="skills-grid">
-      {% for skill_group in site.data.portfolio.skills %}
-      <div class="skill-block reveal">
-        <h3 class="skill-block__cat">{{ skill_group.category }}</h3>
-        <div class="skill-block__items">
-          {% for item in skill_group.items %}<span class="skill-pill">{{ item }}</span>{% endfor %}
-        </div>
-      </div>
-      {% endfor %}
-    </div>
   </div>
 </section>
