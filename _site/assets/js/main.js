@@ -1,3 +1,45 @@
+// ── Hero typed text ───────────────────────────────────────────
+const typedEl = document.getElementById('heroTyped');
+if (typedEl) {
+  const words   = ['IA', 'Deep Learning', 'Computer Vision', 'NLP'];
+  let   wi      = 0;   // index du mot courant
+  let   ci      = 0;   // index du caractère courant
+  let   deleting = false;
+  const SPEED_TYPE   = 70;   // ms par caractère en écriture
+  const SPEED_DELETE = 35;   // ms par caractère en suppression
+  const PAUSE_FULL   = 2000; // pause quand le mot est complet
+  const PAUSE_EMPTY  = 400;  // pause quand le mot est effacé
+
+  function type() {
+    const word    = words[wi];
+    const current = typedEl.textContent;
+
+    if (!deleting) {
+      // On écrit
+      typedEl.textContent = word.slice(0, ci + 1);
+      ci++;
+      if (ci === word.length) {
+        deleting = true;
+        setTimeout(type, PAUSE_FULL);
+        return;
+      }
+      setTimeout(type, SPEED_TYPE);
+    } else {
+      // On efface
+      typedEl.textContent = word.slice(0, ci - 1);
+      ci--;
+      if (ci === 0) {
+        deleting = false;
+        wi = (wi + 1) % words.length;
+        setTimeout(type, PAUSE_EMPTY);
+        return;
+      }
+      setTimeout(type, SPEED_DELETE);
+    }
+  }
+  setTimeout(type, 800); // délai initial
+}
+
 // ── Hero — fade + parallax au scroll ─────────────────────────
 const heroImg     = document.getElementById('heroImg');
 const heroSection = document.getElementById('hero');

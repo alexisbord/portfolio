@@ -1,6 +1,6 @@
 experience:
   - title: "Développeur Full Stack Senior"
-    logo: "https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg"
+    logo: "/assets/css/arc.png"
     company: "TechCorp Paris"
     period: "2022 — Présent"
     description: "Conception et développement d'applications web scalables. Leadership technique d'une équipe de 5 développeurs. Migration vers une architecture microservices."

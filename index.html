@@ -9,9 +9,23 @@ layout: default
   <div class="hero__img" id="heroImg"></div>
   <div class="hero__overlay"></div>
   <div class="hero__content">
-    <h1 class="hero__name">{{ site.hero_title | default: site.title | markdownify | remove: '<p>' | remove: '</p>' }}</h1>
+
+    <p class="hero__eyebrow">Recherche de stage · 6 mois · Mai 2026</p>
+
+    <h1 class="hero__name">
+      Data Science<br>
+      <span class="hero__typed-wrap">&amp; <span class="hero__typed" id="heroTyped"></span><span class="hero__cursor">|</span></span>
+    </h1>
+
     <p class="hero__subtitle">{{ site.description }}</p>
-    <p class="hero__tagline">{{ site.hero_tagline | default: "Ouvert aux opportunités" }}</p>
+    <p class="hero__tagline">{{ site.hero_tagline }}</p>
+
+    <!-- <div class="hero__chips">
+      <span class="hero__chip"><i class="fas fa-map-marker-alt"></i> France</span>
+      <span class="hero__chip"><i class="fas fa-graduation-cap"></i> Polytechnique Montréal / IMT Nord Europe</span>
+      <span class="hero__chip"><i class="fas fa-calendar-alt"></i> Disponible mai 2026</span>
+    </div> -->
+
   </div>
   <a href="#apropos" class="hero__scroll" aria-label="Défiler vers le bas">
     <i class="fas fa-chevron-down"></i>
@@ -22,26 +36,37 @@ layout: default
      À PROPOS
      ═══════════════════════════════════════════════════════════ -->
 <section class="section" id="apropos">
-  <div class="col-center">
-    <div class="section-header">
-      <span class="section-label">01</span>
-      <h2 class="section-title">À propos</h2>
-    </div>
-    <div class="about">
-      <div class="about__avatar">
-        <img src="https://avatars.githubusercontent.com/u/583231?v=4" alt="{{ site.title }}" loading="lazy">
-        <div class="about__dots"></div>
+  <div class="container">
+
+    <div class="about__new-layout">
+      <div class="about__hero">
+        <div class="about__avatar">
+          <img src="/assets/css/profil.jpg" alt="Alexis Bord" loading="lazy">
+        </div>
+        <div class="about__hero-content">
+          <h2 class="about__title-overlay">A propos</h2>
+          <div class="about__hero-footer">
+            <h3 class="about__name">Alexis Bord <span class="separator">-</span> <span class="role">Data & IA</span></h3>
+            <div class="accent-line"></div>
+          </div>
+        </div>
       </div>
-      <div class="about__content">
-        <p class="about__text">{{ site.about }}</p>
-        <div class="about__meta">
-          {% if site.location %}<span class="about__meta-item"><i class="fas fa-map-marker-alt"></i> {{ site.location }}</span>{% endif %}
-          {% if site.email %}<span class="about__meta-item"><i class="fas fa-envelope"></i> {{ site.email }}</span>{% endif %}
+
+      <div class="about__description">
+        <p class="about__text">
+          Élève ingénieur en fin de double diplôme à <strong>Polytechnique Montréal</strong> et <strong>IMT Nord Europe</strong>. 
+          Passionné par la <strong>Data Science</strong> et le <strong>Deep Learning</strong>, je recherche un stage de 6 mois dès mai 2026.
+        </p>
+        
+        <div class="about__actions">
+          <a href="mailto:votre.email@exemple.com" class="btn btn--primary">Me contacter</a>
+          <a href="#projets" class="btn btn--ghost">Voir mes projets</a>
         </div>
       </div>
     </div>
   </div>
 </section>
+
 
 <!-- ═══════════════════════════════════════════════════════════
      EXPÉRIENCE
@@ -49,9 +74,7 @@ layout: default
 <section class="section section--alt" id="experience">
   <div class="col-center">
     <div class="section-header">
-      <span class="section-label">02</span>
       <h2 class="section-title">Expérience</h2>
-      <p class="section-sub">Mon parcours professionnel</p>
     </div>
     <div class="timeline">
       {% for job in site.data.portfolio.experience %}
