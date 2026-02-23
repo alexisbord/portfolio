@@ -1,7 +1,7 @@
 // ── Hero typed text ───────────────────────────────────────────
 const typedEl = document.getElementById('heroTyped');
 if (typedEl) {
-  const words   = ['IA', 'Deep Learning', 'Computer Vision', 'NLP'];
+  const words   = ['IA', 'Deep Learning', 'Computer Vision', 'Langue Naturelle'];
   let   wi      = 0;   // index du mot courant
   let   ci      = 0;   // index du caractère courant
   let   deleting = false;
@@ -131,9 +131,11 @@ function closeModal(modal) {
 }
 
 // Ouvrir au clic sur les cartes cliquables
-document.querySelectorAll('.is-clickable').forEach(card => {
-  card.addEventListener('click', () => {
-    const id = card.getAttribute('data-modal');
+document.querySelectorAll('.card-hint').forEach(btn => {
+  btn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    const card = btn.closest('[data-modal]');
+    const id = card ? card.getAttribute('data-modal') : null;
     if (id) openModal(id);
   });
 });

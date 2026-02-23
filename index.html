@@ -41,27 +41,24 @@ layout: default
     <div class="about__new-layout">
       <div class="about__hero">
         <div class="about__avatar">
-          <img src="/assets/css/profil.jpg" alt="Alexis Bord" loading="lazy">
+          <img src="/assets/img/profil.jpg" alt="Alexis Bord" loading="lazy">
         </div>
         <div class="about__hero-content">
           <h2 class="about__title-overlay">A propos</h2>
-          <div class="about__hero-footer">
-            <h3 class="about__name">Alexis Bord <span class="separator">-</span> <span class="role">Data & IA</span></h3>
-            <div class="accent-line"></div>
-          </div>
+          <div class="accent-line"></div>
+          <!-- <div class="about__hero-footer">
+            <h3 class="about__name">Alexis Bord <span class="separator">-</span> <span class="role">Ingénieur Data & IA</span></h3>
+            
+          </div> -->
         </div>
       </div>
 
       <div class="about__description">
         <p class="about__text">
-          Élève ingénieur en fin de double diplôme à <strong>Polytechnique Montréal</strong> et <strong>IMT Nord Europe</strong>. 
-          Passionné par la <strong>Data Science</strong> et le <strong>Deep Learning</strong>, je recherche un stage de 6 mois dès mai 2026.
-        </p>
-        
-        <div class="about__actions">
-          <a href="mailto:votre.email@exemple.com" class="btn btn--primary">Me contacter</a>
-          <a href="#projets" class="btn btn--ghost">Voir mes projets</a>
-        </div>
+          Élève ingénieur en fin de double diplôme entre <strong>Polytechnique Montréal</strong> et <strong>IMT Nord Europe</strong>, je recherche un stage de fin d'études de 6 mois en France à partir de <strong>mai 2026</strong>. <br><br>
+          Mon parcours a débuté par une formation d'ingénieur généraliste à l'IMT Nord Europe, où j'ai acquis une vision transverse des enjeux technologiques et industriels. Souhaitant approfondir les domaines de la donnée, je me suis orienté vers Polytechnique Montréal pour me spécialiser en <strong>Data Science</strong> et <strong>Intelligence Artificielle</strong>. Ce double cursus me permet aujourd'hui d'allier la rigueur d'une approche généraliste à une expertise technique pointue.
+          <br><br>J'ai eu l'opportunité de mettre ces compétences en pratique lors de <strong>deux stages</strong>, ainsi qu'au travers de <strong>projets académiques et personnels</strong>, que vous pouvez consulter ci-dessous.        </p>
+
       </div>
     </div>
   </div>
@@ -75,6 +72,7 @@ layout: default
   <div class="col-center">
     <div class="section-header">
       <h2 class="section-title">Expérience</h2>
+      <div class="accent-line"></div>
     </div>
     <div class="timeline">
       {% for job in site.data.portfolio.experience %}
@@ -86,7 +84,7 @@ layout: default
           <div class="timeline__header">
             <div class="entity-info">
               {% if job.logo %}
-              <img src="{{ job.logo }}" alt="{{ job.company }}" class="entity-logo">
+              <img src="{{ job.logo | replace: 'assets/css', 'assets/img' }}" alt="{{ job.company }}" class="entity-logo">
               {% endif %}
               <div>
                 <h3 class="timeline__role">{{ job.title }}</h3>
@@ -103,11 +101,14 @@ layout: default
           <div class="timeline__images timeline__images--{{ job.images | size }}">
             {% for img in job.images %}
             <figure class="project__figure">
-              <img src="{{ img.src }}" alt="{{ img.alt }}" loading="lazy">
+              <img src="{{ img.src | replace: 'assets/css', 'assets/img' }}" alt="{{ img.alt }}" loading="lazy">
               {% if img.alt %}<figcaption>{{ img.alt }}</figcaption>{% endif %}
             </figure>
             {% endfor %}
           </div>
+          {% endif %}
+          {% if job.result %}
+          <p class="timeline__result"><strong>Résultat :</strong> {{ job.result }}</p>
           {% endif %}
           <div class="tags">
             {% for tag in job.tags %}<span class="tag">{{ tag }}</span>{% endfor %}
@@ -122,7 +123,7 @@ layout: default
           <div class="modal__header">
             <div class="entity-info">
               {% if job.logo %}
-              <img src="{{ job.logo }}" alt="{{ job.company }}" class="entity-logo entity-logo--lg">
+              <img src="{{ job.logo | replace: 'assets/css', 'assets/img' }}" alt="{{ job.company }}" class="entity-logo entity-logo--lg">
               {% endif %}
               <div>
                 <h2 class="modal__title">{{ job.title }}</h2>
@@ -139,7 +140,7 @@ layout: default
               <div class="modal__images modal__images--{{ block.items | size }}">
                 {% for img in block.items %}
                 <figure class="project__figure">
-                  <img src="{{ img.src }}" alt="{{ img.alt }}" loading="lazy">
+                  <img src="{{ img.src | replace: 'assets/css', 'assets/img' }}" alt="{{ img.alt }}" loading="lazy">
                   {% if img.caption %}<figcaption>{{ img.caption }}</figcaption>{% endif %}
                 </figure>
                 {% endfor %}
@@ -161,9 +162,8 @@ layout: default
 <section class="section" id="formation">
   <div class="col-center">
     <div class="section-header">
-      <span class="section-label">03</span>
       <h2 class="section-title">Formation</h2>
-      <p class="section-sub">Mon parcours académique</p>
+      <div class="accent-line"></div>
     </div>
     <div class="edu-list">
       {% for edu in site.data.portfolio.education %}
@@ -175,7 +175,7 @@ layout: default
         <div class="edu-item__right">
           <div class="entity-info">
             {% if edu.logo %}
-            <img src="{{ edu.logo }}" alt="{{ edu.school }}" class="entity-logo">
+            <img src="{{ edu.logo | replace: 'assets/css', 'assets/img' }}" alt="{{ edu.school }}" class="entity-logo">
             {% endif %}
             <div>
               <h3 class="edu-item__degree">{{ edu.degree }}</h3>
@@ -196,9 +196,8 @@ layout: default
 <section class="section section--alt" id="projets">
   <div class="col-center">
     <div class="section-header">
-      <span class="section-label">04</span>
       <h2 class="section-title">Projets</h2>
-      <p class="section-sub">Quelques réalisations récentes</p>
+      <div class="accent-line"></div>
     </div>
 
     {% for project in site.data.portfolio.projects %}
@@ -221,7 +220,7 @@ layout: default
       <div class="project__images project__images--{{ project.images | size }}">
         {% for img in project.images %}
         <figure class="project__figure">
-          <img src="{{ img.src }}" alt="{{ img.alt }}" loading="lazy">
+          <img src="{{ img.src | replace: 'assets/css', 'assets/img' }}" alt="{{ img.alt }}" loading="lazy">
           {% if img.alt %}<figcaption>{{ img.alt }}</figcaption>{% endif %}
         </figure>
         {% endfor %}
@@ -256,7 +255,7 @@ layout: default
             <div class="modal__images modal__images--{{ block.items | size }}">
               {% for img in block.items %}
               <figure class="project__figure">
-                <img src="{{ img.src }}" alt="{{ img.alt }}" loading="lazy">
+                <img src="{{ img.src | replace: 'assets/css', 'assets/img' }}" alt="{{ img.alt }}" loading="lazy">
                 {% if img.caption %}<figcaption>{{ img.caption }}</figcaption>{% endif %}
               </figure>
               {% endfor %}

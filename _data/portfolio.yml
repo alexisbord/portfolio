@@ -1,158 +1,100 @@
 experience:
-  - title: "Développeur Full Stack Senior"
-    logo: "/assets/css/arc.png"
-    company: "TechCorp Paris"
-    period: "2022 — Présent"
-    description: "Conception et développement d'applications web scalables. Leadership technique d'une équipe de 5 développeurs. Migration vers une architecture microservices."
-    tags: ["React", "Node.js", "PostgreSQL", "Docker"]
-    images:
-      - src: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=700&q=80"
-        alt: "Équipe de développement"
-      - src: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=700&q=80"
-        alt: "Dashboard analytique"
+  - title: "Stage Data Scientist – Vision industrielle & Deep Learning"
+    company: "Arc"
+    logo: "/assets/img/arc.png"
+    period: "Avril — Août 2024"
+    description: "▸ Conduite d'une étude de faisabilité pour l'intégration de l'IA sur une ligne de production afin d'améliorer le contrôle qualité \n▸ Développement et évaluation de modèles d'IA (supervisés/non supervisés) sur des images acquises par ordinateur industriel \n▸ Étude comparative de solutions d'industrialisation de fournisseurs pour choisir celle la plus adaptée aux contraintes de production"
+    result: "Approbation du projet par la direction, déclenchant l'acquisition en location d'une unité pilote pour des tests réelssur ligne de production"
+    tags: ["Python", "Deep Learning", "Computer Vision"]
     details:
       - type: text
-        content: "En rejoignant TechCorp Paris en 2022, j'ai pris la tête technique d'une équipe de 5 développeurs pour refondre l'infrastructure backend de l'application principale, qui supportait alors 50 000 utilisateurs actifs."
+        content: "Arc est le huitième plus grand site industriel français et un leader mondial des arts de la table, engagé dans le développement et la fabrication de produits en verre, dont le verre coloré teinté dans la masse. Au sein de ce groupe industriel, j’ai mené une étude de faisabilité visant à intégrer une solution d’intelligence artificielle pour le contrôle qualité de nouvelles gammes en verre opale coloré, qui nécessite un manuel puisque les machines actuelles ne sont pas suffisantes. "
       - type: text
-        content: "Le projet phare a été la migration d'une architecture monolithique vers des microservices Docker orchestrés via Kubernetes. Cette transition a réduit le temps de déploiement de 45 minutes à moins de 3 minutes, et amélioré la disponibilité de 97,2% à 99,8%."
+        content: "J’ai assuré la collecte et la structuration des données sur un banc d’essai industriel que j’ai mis en place, en optimisant les paramètres d’acquisition (luminosité, réglages caméras) afin de constituer un jeu de données exploitable pour l’entraînement et l’évaluation des modèles. J’ai d’abord validé la performance d’une approche par réseaux de neurones convolutifs (CNN) en apprentissage supervisé, en démontrant des résultats au moins équivalents aux systèmes de vision classiques."
       - type: images
         items:
-          - src: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=900&q=80"
-            alt: "Réunion d'équipe technique"
-            caption: "Sprint planning hebdomadaire"
-          - src: "https://images.unsplash.com/photo-1605379399642-870262d3d051?w=900&q=80"
-            alt: "Architecture microservices"
-            caption: "Schéma d'architecture cible"
-      - type: text
-        content: "J'ai également introduit des pratiques de code review systématiques et une pipeline CI/CD complète avec tests automatisés, réduisant le taux de bugs en production de 60%."
-
-  - title: "Développeur Front-End"
-    company: "Agence Créative Studio"
-    period: "2019 — 2022"
-    description: "Développement d'interfaces utilisateur modernes pour des clients grands comptes. Mise en place d'un design system partagé."
-    tags: ["Vue.js", "TypeScript", "SCSS", "Figma"]
-    details:
-      - type: text
-        content: "Au sein de l'Agence Créative Studio, j'ai travaillé sur une dizaine de projets pour des clients comme L'Oréal, Decathlon et BNP Paribas. Mon rôle était de transformer les maquettes Figma en interfaces web performantes et accessibles."
+          - src: "assets/img/banc.png"
+            caption: "Banc de test"
+      - type: text 
+        content: "Face à la diversité croissante des articles et des défauts, j’ai ensuite orienté le projet vers une approche non supervisée basée sur des auto-encodeurs afin de développer un système de détection d’anomalies plus flexible et généralisable, permettant de démontrer la pertinence de la solution et d’obtenir la validation de la direction."
       - type: images
         items:
-          - src: "https://images.unsplash.com/photo-1561070791-2526d30994b5?w=900&q=80"
-            alt: "Design system"
-            caption: "Composants du design system"
+          - src: "assets/img/autoencodeur.png"
+            caption: "Classification non supervisée par auto-encodeur pour la détection des défauts"
       - type: text
-        content: "L'initiative dont je suis le plus fier est la création d'un design system partagé entre toutes les équipes, composé de plus de 80 composants Vue.js documentés sous Storybook. Cela a divisé par deux le temps de démarrage des nouveaux projets."
-
-  - title: "Développeur Web Junior"
-    company: "StartupXYZ"
-    period: "2017 — 2019"
-    description: "Développement et maintenance de l'application web principale. Intégration d'APIs tierces et optimisation des performances."
-    tags: ["JavaScript", "PHP", "MySQL", "Git"]
+        content: "En parallèle, j’ai mené une prospection auprès de différents fournisseurs afin de comparer les solutions d’industrialisation les plus adaptées aux contraintes des lignes de production et d’identifier l’architecture technique la plus pertinente, ce qui a conduit au choix d’une solution pilote déployée pour des tests en conditions réelles."
+      - type: images
+        items:
+          - src: "assets/img/industrialisation.png"
+            caption: "Solution d'industrialisation de l'entreprise retenue"
+  - title: "Stage Data Analyst"
+    company: "Vinci – Cegelec Projets Espace & Hydrogène"
+    logo: "/assets/img/cegelec.png"
+    period: "Mai — Août 2023"
+    description: "▸ Réalisation d'un POC sur la solution SaaS Teepee pour l'automatisation de processus métiers : \n▸ Développement d’un tableau de bord de suivi des candidats, facilitant la visibilité sur le processus de recrutement \n▸ Création d’un outil de suivi en temps réel des expéditions vers la Guyane, garantissant la traçabilité complète du matériel"
+    result: "Automatisation réussie des processus cibles, marquée par le test de l'outil de recrutement en conditions réelles par l'équipe RH"
+    tags: ["SQL", "Excel", "SaaS"]
     details:
       - type: text
-        content: "Mon premier poste m'a plongé dans un environnement startup dynamique. J'ai été responsable du développement de nouvelles fonctionnalités sur l'application SaaS principale, utilisée par environ 2 000 clients PME."
+        content: "Au sein de Vinci Cegelec à Puteaux, j'ai réalisé un POC sur la solution SaaS Teepee afin d'automatiser deux processus métiers clés pour l'équipe."
       - type: text
-        content: "Une mission clé a été l'intégration de plusieurs APIs tierces (Stripe, Mailchimp, Zapier) et l'optimisation de la base de données MySQL, réduisant les temps de chargement de 4s à moins de 800ms."
-
+        content: "Premier livrable : un tableau de bord de suivi des candidats, facilitant la visibilité sur l'ensemble du processus de recrutement et permettant aux managers de suivre les candidatures en temps réel."
+      - type: text
+        content: "Second livrable : un outil de suivi en temps réel des expéditions de matériel vers la Guyane, garantissant une traçabilité complète et réduisant les pertes d'information entre les équipes logistiques."
 education:
-  - degree: "Master Informatique — Génie Logiciel"
-    logo: "https://upload.wikimedia.org/wikipedia/fr/thumb/5/51/Sorbonne_Universit%C3%A9_-_Lettres_logo_2018.svg/200px-Sorbonne_Universit%C3%A9_-_Lettres_logo_2018.svg.png"
-    school: "Université Pierre et Marie Curie"
-    period: "2015 — 2017"
-    description: "Spécialisation en architecture logicielle et développement web. Mention très bien. Mémoire sur l'optimisation des Single Page Applications."
+  - degree: "Maîtrise en génie informatique, option ingénierie et analytique des données"
+    school: "Polytechnique Montréal"
+    logo: "/assets/img/polymtl.png"
+    period: "2024 — 2026"
+    description: "Double diplôme en partenariat avec IMT Nord Europe : Deep learning, Apprentissage automatique, Vision par ordinateur, NLP, Infonuagique, Fouille de données"
 
-  - degree: "Licence Informatique"
-    school: "IUT de Montpellier"
-    period: "2012 — 2015"
-    description: "Formation généraliste en informatique couvrant algorithmique, base de données, réseaux et développement logiciel."
+  - degree: "Cycle ingénieur généraliste,  spécialisation informatique"
+    school: "IMT Nord Europe (École des Mines de Douai)"
+    logo: "/assets/img/imt.png"
+    period: "2022 — 2024"
+    description: "Mathématiques, Machine learning, Clustering, Base de données, Gestion de projet, Économie et gestion, Marchés financiers"
 
-  - degree: "Certifications"
-    school: "Diverses"
-    period: "2018 — 2024"
-    description: "AWS Certified Developer (2023), Google Professional Cloud Developer (2022), MongoDB Associate Developer (2021)."
+  - degree: "Classe préparatoire aux grandes écoles, filière MP"
+    school: "Lycée Charlemagne, Paris"
+    logo: "/assets/img/charlemagne.jpg"
+    period: "2020 — 2022"
+    description: "Formation intensive en mathématiques et en physique"
 
 projects:
-  - name: "Projet #1 — DevFlow"
-    context: "Dans le cadre de mon master à l'Université Paris Saclay, j'ai développé une plateforme de gestion de projets agiles pour répondre aux besoins des équipes distribuées."
-    objective: "Concevoir et implémenter une application web temps réel permettant la collaboration synchrone entre équipes, avec gestion des sprints, tableaux Kanban et métriques de vélocité."
-    result: "L'application a été adoptée par 3 équipes internes, avec une réduction mesurée de 30% du temps de coordination lors des cérémonies agiles."
-    tags: ["React", "Socket.io", "Node.js", "MongoDB"]
-    github: "#"
-    demo: "#"
-    images:
-      - src: "https://images.unsplash.com/photo-1551650975-87deedd944c3?w=700&q=80"
-        alt: "Interface principale DevFlow"
-      - src: "https://images.unsplash.com/photo-1507925921958-8a62f3d1a50d?w=700&q=80"
-        alt: "Tableau Kanban en temps réel"
+  - name: "Datathon UdeM — Planificateur de repas intelligent"
+    context: "Projet réalisé lors du Datathon de l'Université de Montréal, remporté avec le Prix de la meilleure utilisation de l'IA."
+    objective: "Développer un planificateur de repas intelligent combinant détection d'ingrédients par vision par ordinateur, recommandation de recettes et suivi calorique intégré."
+    result: "Prix de la meilleure utilisation de l'IA décerné par le jury du Datathon UdeM."
+    tags: ["Python", "YOLOv11", "Streamlit", "SQLite", "API Garmin", "Computer Vision"]
+    github: "https://github.com/alexisbord/UdeM_Hack"
     details:
       - type: text
-        content: "DevFlow est né d'un constat simple : les outils de gestion de projet existants sont soit trop lourds, soit trop limités pour les petites équipes agiles. L'objectif était de créer un outil minimaliste mais puissant."
-      - type: images
-        items:
-          - src: "https://images.unsplash.com/photo-1531403009284-440f080d1e12?w=900&q=80"
-            alt: "Tableau Kanban DevFlow"
-            caption: "Vue Kanban avec drag & drop"
-          - src: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=900&q=80"
-            alt: "Dashboard métriques"
-            caption: "Dashboard de vélocité d'équipe"
+        content: "Dans le cadre du Datathon organisé par l'Université de Montréal, nous avons développé en équipe une application de planification de repas intelligente, récompensée par le prix de la meilleure utilisation de l'IA."
       - type: text
-        content: "L'architecture repose sur React + Redux côté client et Node.js + Socket.io côté serveur pour la synchronisation temps réel. La grande difficulté technique a été la gestion des conflits lors d'éditions simultanées, résolue via un système de verrous optimistes."
-      - type: images
-        items:
-          - src: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=900&q=80"
-            alt: "Code source DevFlow"
-            caption: "Extrait du code backend"
+        content: "L'application repose sur trois modules : la détection automatique d'ingrédients via YOLOv11 à partir d'une photo du réfrigérateur, un moteur de recommandation de recettes basé sur les ingrédients détectés, et la synchronisation du suivi calorique avec l'API Garmin."
+      - type: text
+        content: "L'interface a été développée sous Streamlit avec un stockage SQLite pour la persistance des données utilisateur. Le projet a été conçu, développé et présenté en moins de 24 heures."
 
-  - name: "Projet #2 — WeatherScope"
-    context: "Application météo PWA développée en autonomie pour explorer les possibilités des Progressive Web Apps et des APIs de données environnementales."
-    objective: "Fournir des prévisions hyper-locales avec visualisation de données interactives, support offline complet et notifications push pour les alertes météo sévères."
-    result: "500+ utilisateurs actifs, score Lighthouse 97/100, sélectionnée comme exemple de bonnes pratiques PWA dans un article Medium."
-    tags: ["Vue.js", "D3.js", "OpenWeather API", "PWA"]
-    github: "#"
-    demo: "#"
-    images:
-      - src: "https://images.unsplash.com/photo-1504608524841-42584120d693?w=700&q=80"
-        alt: "Visualisation météo interactive"
-      - src: "https://images.unsplash.com/photo-1561484930-998b6a7b22e8?w=700&q=80"
-        alt: "Dashboard mobile WeatherScope"
+  - name: "Micro-entreprise Eclair-CIE"
+    context: "Projet entrepreneurial mené en partenariat avec un lycée et une association, visant à accompagner des élèves en bac professionnel dans la création d'une micro-entreprise."
+    objective: "Permettre à des lycéens de créer et gérer une micro-entreprise réelle — catalogue, site web, production et vente — pour financer un voyage scolaire."
+    result: "Micro-entreprise créée et opérationnelle, avec réalisation d'un catalogue produit, d'un site web et d'une campagne de vente réussie."
+    tags: ["Gestion de projet", "Entrepreneuriat", "Web", "Trésorerie"]
+    demo: "https://eclair-cie.super.site"
     details:
       - type: text
-        content: "WeatherScope est parti d'une frustration personnelle : les applications météo existantes affichent trop d'informations inutiles. J'ai voulu créer une interface épurée centrée sur l'essentiel."
-      - type: images
-        items:
-          - src: "https://images.unsplash.com/photo-1504608524841-42584120d693?w=900&q=80"
-            alt: "Interface WeatherScope"
-            caption: "Vue principale avec prévisions 7 jours"
-          - src: "https://images.unsplash.com/photo-1561484930-998b6a7b22e8?w=900&q=80"
-            alt: "Visualisations D3.js"
-            caption: "Graphiques de précipitations en D3.js"
+        content: "J'ai accompagné des élèves en bac professionnel dans la création et la gestion d'une micro-entreprise, en partenariat avec leur lycée et une association locale. Mon rôle était de les guider sur les aspects entrepreneuriaux et techniques du projet."
       - type: text
-        content: "Les visualisations D3.js ont été la partie la plus technique. J'ai développé des graphiques animés pour les courbes de température et les roses des vents, optimisés pour fonctionner parfaitement sur mobile."
-
-  - name: "Projet #3 — CLI DevTools"
-    context: "Suite d'outils open source créée pour automatiser les tâches répétitives du workflow développeur, initialement pour un usage personnel puis partagée sur GitHub."
-    objective: "Proposer un ensemble d'utilitaires CLI modulaires couvrant la génération de boilerplate, la gestion de secrets, le scaffolding de projets et les helpers Git."
-    result: "1 200+ étoiles sur GitHub, 40+ contributeurs externes, packagé sur PyPI avec 8 000+ téléchargements mensuels."
-    tags: ["Python", "Click", "Rich", "Docker"]
-    github: "#"
-    demo: "#"
-    images:
-      - src: "https://images.unsplash.com/photo-1629654297299-c8506221ca97?w=700&q=80"
-        alt: "Terminal CLI DevTools"
-    details:
+        content: "Les livrables incluaient la réalisation d'un catalogue produit, la création d'un site web vitrine, et l'organisation complète de la production et de la vente. J'ai également géré la trésorerie de la structure pour assurer sa viabilité financière."
       - type: text
-        content: "CLI DevTools a commencé comme une collection de scripts bash personnels avant d'évoluer en une suite Python structurée. La réécriture avec Click a permis d'ajouter une documentation automatique et une gestion des erreurs robuste."
-      - type: images
-        items:
-          - src: "https://images.unsplash.com/photo-1629654297299-c8506221ca97?w=900&q=80"
-            alt: "CLI en action"
-            caption: "Interface Rich avec couleurs et progress bars"
-      - type: text
-        content: "Le projet a pris une dimension inattendue après un post sur Reddit. En une semaine, le repo est passé de 12 à 800 étoiles. Gérer cette communauté soudaine a été une expérience très formatrice sur la gestion open source."
+        content: "L'objectif final — financer un voyage scolaire grâce aux bénéfices générés — a été atteint, offrant aux élèves une expérience concrète de l'entrepreneuriat."
 
 skills:
-  - category: "Front-End"
-    items: ["React", "Vue.js", "TypeScript", "HTML/CSS", "SCSS", "Tailwind", "D3.js"]
-  - category: "Back-End"
-    items: ["Node.js", "Python", "PHP", "REST APIs", "GraphQL", "PostgreSQL", "MongoDB"]
-  - category: "DevOps & Tools"
-    items: ["Docker", "AWS", "Git", "CI/CD", "Linux", "Nginx", "Figma"]
+  - category: "Programmation"
+    items: ["Python", "SQL", "Java", "R"]
+  - category: "Machine Learning"
+    items: ["Scikit-learn", "PyTorch", "TensorFlow", "Pandas", "NumPy", "YOLOv11"]
+  - category: "Cloud & Data"
+    items: ["AWS", "PostgreSQL", "SQLite", "Streamlit"]
+  - category: "Langues"
+    items: ["Français (natif)", "Anglais (TOEIC 955)", "Allemand (B1)"]

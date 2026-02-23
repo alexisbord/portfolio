@@ -1,12 +1,13 @@
 title: "Alexis Bord"
 hero_tagline: "Élève ingénieur en fin de double diplôme d'ingénieur — Polytechnique Montréal / IMT Nord Europe"
-hero_image: "dark_lab_cut.png"
+hero_image: "assets/img/dark_lab_cut.png"
 description: ""
 about: "Élève ingénieur en fin de double diplôme entre Polytechnique Montréal et IMT Nord Europe, je me spécialise en data science et intelligence artificielle. Passionné par l'apprentissage automatique, la vision par ordinateur et le traitement du langage naturel, je cherche à appliquer ces techniques à des problèmes concrets et à fort impact. Disponible pour un stage de 6 mois à partir de mai 2026, en France."
 email: "alexis.bord094@gmail.com"
 location: "Paris, France"
 github: "alexisbord"
 linkedin: "alexis-bord/"
+favicon: "/assets/img/favicon.png"
 
 # Build settings
 plugins:
