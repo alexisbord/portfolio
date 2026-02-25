@@ -31,6 +31,7 @@
     <nav class="navbar__nav" id="navMenu">
       <ul>
         <li><a href="#apropos" class="nav-link">À propos</a></li>
+        <li><a href="#competences" class="nav-link">Compétences</a></li>
         <li><a href="#experience" class="nav-link">Expérience</a></li>
         <li><a href="#formation" class="nav-link">Formation</a></li>
         <li><a href="#projets" class="nav-link">Projets</a></li>
@@ -111,6 +112,83 @@
           <br><br>J'ai eu l'opportunité de mettre ces compétences en pratique lors de <strong>deux stages</strong>, ainsi qu'au travers de <strong>projets académiques et personnels</strong>, que vous pouvez consulter ci-dessous.        </p>
 
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     COMPÉTENCES
+     ═══════════════════════════════════════════════════════════ -->
+<section class="section" id="competences">
+  <div class="col-center">
+    <div class="section-header">
+      <h2 class="section-title">Compétences</h2>
+      <div class="accent-line"></div>
+    </div>
+    <div class="skills-grid">
+      
+      <div class="skill-group reveal">
+        <h3 class="skill-group__title">Programmation</h3>
+        <div class="skill-group__items">
+          
+          <span class="skill-tag">Python</span>
+          
+          <span class="skill-tag">SQL</span>
+          
+          <span class="skill-tag">Java</span>
+          
+          <span class="skill-tag">R</span>
+          
+        </div>
+      </div>
+      
+      <div class="skill-group reveal">
+        <h3 class="skill-group__title">Machine Learning</h3>
+        <div class="skill-group__items">
+          
+          <span class="skill-tag">Scikit-learn</span>
+          
+          <span class="skill-tag">PyTorch</span>
+          
+          <span class="skill-tag">TensorFlow</span>
+          
+          <span class="skill-tag">Pandas</span>
+          
+          <span class="skill-tag">NumPy</span>
+          
+          <span class="skill-tag">OpenCV</span>
+          
+        </div>
+      </div>
+      
+      <div class="skill-group reveal">
+        <h3 class="skill-group__title">Cloud & Data</h3>
+        <div class="skill-group__items">
+          
+          <span class="skill-tag">AWS</span>
+          
+          <span class="skill-tag">PostgreSQL</span>
+          
+          <span class="skill-tag">SQLite</span>
+          
+          <span class="skill-tag">Streamlit</span>
+          
+        </div>
+      </div>
+      
+      <div class="skill-group reveal">
+        <h3 class="skill-group__title">Langues</h3>
+        <div class="skill-group__items">
+          
+          <span class="skill-tag">Français (natif)</span>
+          
+          <span class="skill-tag">Anglais (TOEIC 955)</span>
+          
+          <span class="skill-tag">Allemand (B1)</span>
+          
+        </div>
+      </div>
+      
     </div>
   </div>
 </section>
@@ -402,7 +480,7 @@
         </div>
       </div>
 
-      <p class="project__text">Projet réalisé lors du Datathon de l'Université de Montréal en groupe de 3.</p>
+      <p class="project__text">Ce projet a été réalisé lors du Datathon de l'Université de Montréal en groupe de 3, qui nous a permis de remporter le prix de la meilleure utilisation de l'IA.</p>
       
 
       
@@ -412,43 +490,36 @@
           
         
           
-          <div class="project__images project__images--2">
+          <p class="project__text">Côté technique, nous avons fine-tuné YOLOv11 sur une base de 30 ingrédients courants pour surpasser les limitations des modèles de zero-shot comme CLIP. Les données sont centralisées dans une base SQLite, permettant de croiser les apports caloriques avec les dépenses sportives récupérées via l'API Garmin. Le projet intègre également un chatbot agissant comme un coach de santé. En exploitant l'API OpenAI et les données physiologiques de l'utilisateur (poids, âge, activité physique), l'IA génère des programmes d'entraînement et des conseils nutritionnels sur mesure pour soutenir la motivation à long terme.</p>
+          
+        
+          
+          <div class="project__layout3">
             
             <figure class="project__figure">
-              <img src="/assets/img/fridge.jpg" alt="" loading="lazy">
+              <img src="/assets/img/fridge.jpg" alt="Détection d'ingrédients par YOLOv11" loading="lazy" style="object-fit: contain;">
               <figcaption>Détection d'ingrédients par YOLOv11</figcaption>
             </figure>
             
             <figure class="project__figure">
-              <img src="/assets/img/recipe.jpg" alt="" loading="lazy">
+              <img src="/assets/img/recipe.jpg" alt="Interface de recommandation de recettes et Nutri-Score" loading="lazy" style="object-fit: contain;">
               <figcaption>Interface de recommandation de recettes et Nutri-Score</figcaption>
             </figure>
             
+            <div class="project__layout-right">
+              
+              <figure class="project__figure">
+                <img src="/assets/img/assistant.jpg" alt="Assistant IA personnalisé pour le suivi santé" loading="lazy" style="object-fit: contain;">
+                <figcaption>Assistant IA personnalisé pour le suivi santé</figcaption>
+              </figure>
+              
+              <figure class="project__figure">
+                <img src="/assets/img/winner.jpg" alt="Vainqueurs du prix de la meilleure utilisation de l'IA" loading="lazy" style="object-fit: contain;">
+                <figcaption>Vainqueurs du prix de la meilleure utilisation de l'IA</figcaption>
+              </figure>
+              
+            </div>
           </div>
-          
-        
-          
-          <p class="project__text">Côté technique, nous avons fine-tuné YOLOv11 sur une base de 30 ingrédients courants pour surpasser les limitations des modèles de zero-shot comme CLIP. Les données sont centralisées dans une base SQLite, permettant de croiser les apports caloriques avec les dépenses sportives récupérées via l'API Garmin.</p>
-          
-        
-          
-          <div class="project__images project__images--2">
-            
-            <figure class="project__figure">
-              <img src="/assets/img/assistant.jpg" alt="" loading="lazy">
-              <figcaption>Assistant IA personnalisé pour le suivi santé</figcaption>
-            </figure>
-            
-            <figure class="project__figure">
-              <img src="/assets/img/winner.jpg" alt="" loading="lazy">
-              <figcaption>Recommandations nutritionnelles personnalisées</figcaption>
-            </figure>
-            
-          </div>
-          
-        
-          
-          <p class="project__text">Le projet intègre également un chatbot agissant comme un coach de santé. En exploitant l'API OpenAI et les données physiologiques de l'utilisateur (poids, âge, activité physique), l'IA génère des programmes d'entraînement et des conseils nutritionnels sur mesure pour soutenir la motivation à long terme. Ce projet nous a permis , remporté avec le Prix de la meilleure utilisation de l'IA.</p>
           
         
       
@@ -456,57 +527,133 @@
       
 
       <div class="tags">
-        <span class="tag">Python</span><span class="tag">YOLOv11</span><span class="tag">Streamlit</span><span class="tag">SQLite</span><span class="tag">API Garmin</span><span class="tag">Computer Vision</span>
+        <span class="tag">Python</span><span class="tag">Streamlit</span><span class="tag">SQLite</span><span class="tag">API</span>
       </div>
     </article>
     
     <article class="project reveal">
       <div class="project__header">
         <div class="project__title-row">
-          <h3 class="project__name">IMT Nord Europe — Annotation automatique de données de pollution</h3>
+          <h3 class="project__name">Annotation automatique de données de pollution</h3>
         </div>
         <div class="project__links">
           
-          <a href="https://github.com/eSaleh/P6_Systeme_annotation_donnees_polution.git" class="btn btn--ghost btn--sm" target="_blank" rel="noopener"><i class="fab fa-github"></i> Code</a>
+          
         </div>
       </div>
 
-      <p class="project__text">Projet de recherche académique réalisé en collaboration avec le Groupe Tera pour corréler événements urbains et qualité de l'air</p>
-      <p class="project__text"><strong>Objectif :</strong> Développer un système de vision par ordinateur sur Raspberry Pi pour détecter le trafic routier et synchroniser ces événements avec les mesures de micro-capteurs de pollution PM2.5</p>
-
+      <p class="project__text">Ce projet de recherche académique a été mené pour le Groupe Tera en collaboration avec une doctorante de l’IMT Nord Europe, dans le but d’analyser la corrélation entre le trafic urbain et les pics de pollution atmosphérique.</p>
       
 
       
-      <p class="project__text project__text--result"><i class="fas fa-chart-line"></i> <strong>Résultat :</strong> Validation d'une méthodologie de fusion de données multi-sources et accueil positif des encadrants pour la pertinence de l'approche en recherche environnementale</p>
+        
+          
+          <p class="project__text">L’objectif du projet était de concevoir un système de vision par ordinateur embarqué sur Raspberry Pi, capable de labelliser automatiquement le flux routier afin d’expliquer certaines anomalies observées dans les mesures de particules fines PM2.5.</p>
+          
+        
+          
+          <p class="project__text">Afin de répondre aux contraintes de stockage et de réactivité des caméras embarquées, le logiciel Motion a été implémenté sur Raspberry Pi. Cette solution permettait de déclencher l’enregistrement vidéo uniquement en cas de détection de mouvement et a servi de base à la constitution d’un jeu de données visuelles synchronisé avec les relevés des micro-capteurs de pollution.</p>
+          
+        
+          
+          
+          <div class="project__images project__images--3">
+            
+            <figure class="project__figure">
+              <img src="/assets/img/materiel.png" alt="" loading="lazy">
+              <figcaption>Cartes Raspberry Pi 3 Model B+ et webcams utilisées pour l’acquisition de données sur le terrain</figcaption>
+            </figure>
+            
+            <figure class="project__figure">
+              <img src="/assets/img/setup.png" alt="" loading="lazy">
+              <figcaption>Dispositif expérimental mis en place pour comparer les mesures issues des capteurs Tera et CozyConnect</figcaption>
+            </figure>
+            
+            <figure class="project__figure">
+              <img src="/assets/img/cars.png" alt="" loading="lazy">
+              <figcaption>Pipeline de détection reposant sur YOLOv7 et suivi d’identité assuré par DeepSORT</figcaption>
+            </figure>
+            
+          </div>
+          
+        
+          
+          <p class="project__text">Un algorithme d’annotation automatique fondé sur des critères cinématiques, tels que la vitesse et l’accélération, a été développé afin de classifier les véhicules comme étant en mouvement ou à l’arrêt. Cette couche logique a permis de corriger certaines erreurs inhérentes au tracking, notamment lors d’occlusions ou de faux appariements, et de générer des labels précis pour chaque image.</p>
+          
+        
+          
+          <p class="project__text">La phase finale du projet a consisté à fusionner les annotations issues de la vision par ordinateur avec les données de concentration en PM2.5 récupérées via les API Web de Tera et CozyConnect. L’application de filtres médians et de fenêtres temporelles a permis d’analyser la relation entre le passage des véhicules et la persistance des polluants dans l’air.</p>
+          
+        
+          
+          <p class="project__text">Les travaux ont permis de valider une méthodologie de fusion de données multi-sources, avec un retour positif des encadrants concernant la pertinence de l’analyse cinématique proposée.</p>
+          
+        
+      
+
       
 
       <div class="tags">
-        <span class="tag">Python</span><span class="tag">YOLOv7</span><span class="tag">DeepSORT</span><span class="tag">Raspberry Pi</span><span class="tag">OpenCV</span><span class="tag">Pandas</span><span class="tag">API Web</span>
+        <span class="tag">Python</span><span class="tag">Raspberry Pi</span><span class="tag">API Web</span>
       </div>
     </article>
     
     <article class="project reveal">
       <div class="project__header">
         <div class="project__title-row">
-          <h3 class="project__name">Micro-entreprise Eclair-CIE</h3>
+          <h3 class="project__name">Création de la micro-entreprise Eclair-CIE</h3>
         </div>
         <div class="project__links">
-          <a href="https://eclair-cie.super.site" class="btn btn--ghost btn--sm" target="_blank" rel="noopener"><i class="fas fa-external-link-alt"></i> Demo</a>
+          <a href="https://eclair-cie.super.site" class="btn btn--ghost btn--sm" target="_blank" rel="noopener"><i class="fas fa-external-link-alt"></i> Site</a>
           
         </div>
       </div>
 
-      <p class="project__text">Projet entrepreneurial mené en partenariat avec un lycée et une association, visant à accompagner des élèves en bac professionnel dans la création d'une micro-entreprise.</p>
-      <p class="project__text"><strong>Objectif :</strong> Permettre à des lycéens de créer et gérer une micro-entreprise réelle — catalogue, site web, production et vente — pour financer un voyage scolaire.</p>
-
+      <p class="project__text">Ce projet entrepreneurial et social a été mené en partenariat avec un lycée professionnel et une association afin d'initier des élèves de bac professionnel aux réalités du monde de l'entreprise.</p>
       
 
       
-      <p class="project__text project__text--result"><i class="fas fa-chart-line"></i> <strong>Résultat :</strong> Micro-entreprise créée et opérationnelle, avec réalisation d'un catalogue produit, d'un site web et d'une campagne de vente réussie.</p>
+        
+          
+          <p class="project__text">L’objectif consistait à accompagner une classe dans la création complète d’une micro‑entreprise, depuis la conception des produits jusqu’à la gestion financière, afin de financer une sortie scolaire. L’accompagnement portait sur l’ensemble des étapes clés de la création de valeur, de l’étude de marché initiale à la construction d’un catalogue produit cohérent, tout en initiant les élèves aux principes de la gestion de projet agile.</p>
+          
+        
+          
+          
+          <div class="project__images project__images--3">
+            
+            <figure class="project__figure">
+              <img src="/assets/img/d3.png" alt="" loading="lazy">
+              <figcaption>Système d'impression 3D mis en place pour la fabrication des produits</figcaption>
+            </figure>
+            
+            <figure class="project__figure">
+              <img src="/assets/img/eolienne.png" alt="" loading="lazy">
+              <figcaption>Exemple d'un produit conçu et fabriqué pour la vente : une éolienne miniature fonctionnelle imprimée en 3D</figcaption>
+            </figure>
+            
+            <figure class="project__figure">
+              <img src="/assets/img/carte.png" alt="" loading="lazy">
+              <figcaption>Protoype de carte multifonctionnelle produite par les élèves</figcaption>
+            </figure>
+            
+          </div>
+          
+        
+          
+          <p class="project__text">J'ai assuré la gestion numérique par la création d'un site web vitrine et le suivi rigoureux de la trésorerie de la structure. Cette double approche, technique et administrative, a permis de transformer une initiative pédagogique en une réussite commerciale concrète, offrant aux élèves une immersion gratifiante dans l'entrepreneuriat moderne.</p>
+          
+        
+          
+          <p class="project__text">La structure est devenue pleinement opérationnelle et a généré les premieres bénéfices nécessaires au financement du projet pédagogique, validant ainsi l'acquisition de compétences concrètes par les élèves et la continuation future.</p>
+          
+        
+      
+
       
 
       <div class="tags">
-        <span class="tag">Gestion de projet</span><span class="tag">Entrepreneuriat</span><span class="tag">Web</span><span class="tag">Trésorerie</span>
+        <span class="tag">Gestion de projet</span><span class="tag">Impression 3D</span><span class="tag">Web Design</span>
       </div>
     </article>
     

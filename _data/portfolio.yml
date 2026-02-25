@@ -1,3 +1,28 @@
+# - type: images
+      #   items:
+      #     - src: "/assets/img/assistant.jpg"
+      #       caption: "Assistant IA personnalisé pour le suivi santé"
+      #     - src: "/assets/img/winner.jpg"
+      #       caption: "Recommandations nutritionnelles personnalisées"
+
+# - type: images
+      #   items:
+      #     - src: "/assets/img/fridge.jpg"
+      #       caption: "Détection d'ingrédients par YOLOv11"
+      #       width: "40%"
+      #     - src: "/assets/img/recipe.jpg"
+      #       caption: "Interface de recommandation de recettes et Nutri-Score"
+      #       width: "40%"
+      # - type: layout
+      #   left:
+      #     src: "/assets/img/fridge.jpg"
+      #     caption: "Image principale à gauche"
+      #   right:
+      #     - src: "/assets/img/recipe.jpg"
+      #       caption: "Image en haut à droite"
+      #     - src: "/assets/img/winner.jpg"
+      #       caption: "Image en bas à droite"
+
 experience:
   - title: "Stage Data Scientist – Vision industrielle & Deep Learning"
     company: "Arc"
@@ -64,66 +89,74 @@ education:
 
 projects:
   - name: "Datathon UdeM — Planificateur de repas intelligent"
-    context: "Projet réalisé lors du Datathon de l'Université de Montréal en groupe de 3."
-    tags: ["Python", "YOLOv11", "Streamlit", "SQLite", "API Garmin", "Computer Vision"]
+    context: "Ce projet a été réalisé lors du Datathon de l'Université de Montréal en groupe de 3, qui nous a permis de remporter le prix de la meilleure utilisation de l'IA."
+    tags: ["Python", "Streamlit", "SQLite", "API"]
     github: "https://github.com/alexisbord/UdeM_Hack"
     blocks:
       - type: text
         content: "NutriSnap permet de scanner le contenu d'un réfrigérateur pour générer instantanément des suggestions de recettes saines. Le système calcule le Nutri-Score et les apports nutritionnels (protéines, sucres, graisses) de chaque plat pour aider l'utilisateur à maintenir une alimentation équilibrée selon ses objectifs personnels."
-      - type: images
-        items:
+      - type: text
+        content: "Côté technique, nous avons fine-tuné YOLOv11 sur une base de 30 ingrédients courants pour surpasser les limitations des modèles de zero-shot comme CLIP. Les données sont centralisées dans une base SQLite, permettant de croiser les apports caloriques avec les dépenses sportives récupérées via l'API Garmin. Le projet intègre également un chatbot agissant comme un coach de santé. En exploitant l'API OpenAI et les données physiologiques de l'utilisateur (poids, âge, activité physique), l'IA génère des programmes d'entraînement et des conseils nutritionnels sur mesure pour soutenir la motivation à long terme."
+      - type: layout3
+        cols:
           - src: "/assets/img/fridge.jpg"
             caption: "Détection d'ingrédients par YOLOv11"
           - src: "/assets/img/recipe.jpg"
             caption: "Interface de recommandation de recettes et Nutri-Score"
-      - type: text
-        content: "Côté technique, nous avons fine-tuné YOLOv11 sur une base de 30 ingrédients courants pour surpasser les limitations des modèles de zero-shot comme CLIP. Les données sont centralisées dans une base SQLite, permettant de croiser les apports caloriques avec les dépenses sportives récupérées via l'API Garmin."
-      - type: images
-        items:
+        stack:
           - src: "/assets/img/assistant.jpg"
             caption: "Assistant IA personnalisé pour le suivi santé"
           - src: "/assets/img/winner.jpg"
-            caption: "Recommandations nutritionnelles personnalisées"
-      - type: text
-        content: "Le projet intègre également un chatbot agissant comme un coach de santé. En exploitant l'API OpenAI et les données physiologiques de l'utilisateur (poids, âge, activité physique), l'IA génère des programmes d'entraînement et des conseils nutritionnels sur mesure pour soutenir la motivation à long terme. Ce projet nous a permis , remporté avec le Prix de la meilleure utilisation de l'IA."
-        
+            caption: "Vainqueurs du prix de la meilleure utilisation de l'IA"        
 
-  - name: "IMT Nord Europe — Annotation automatique de données de pollution"
-    context: "Projet de recherche académique réalisé en collaboration avec le Groupe Tera pour corréler événements urbains et qualité de l'air"
-    objective: "Développer un système de vision par ordinateur sur Raspberry Pi pour détecter le trafic routier et synchroniser ces événements avec les mesures de micro-capteurs de pollution PM2.5"
-    result: "Validation d'une méthodologie de fusion de données multi-sources et accueil positif des encadrants pour la pertinence de l'approche en recherche environnementale"
-    context: "Projet de recherche académique réalisé en collaboration avec le Groupe Tera pour corréler événements urbains et qualité de l'air"
-    tags: ["Python", "YOLOv7", "DeepSORT", "Raspberry Pi", "OpenCV", "Pandas", "API Web"]
-    github: "https://github.com/eSaleh/P6_Systeme_annotation_donnees_polution.git"
-    details:
+  - name: "Annotation automatique de données de pollution"
+    context: "Ce projet de recherche académique a été mené pour le Groupe Tera en collaboration avec une doctorante de l’IMT Nord Europe, dans le but d’analyser la corrélation entre le trafic urbain et les pics de pollution atmosphérique."
+    tags: ["Python", "Raspberry Pi", "API Web"]
+    blocks:
       - type: text
-        content: "Conception d'une architecture embarquée sur Raspberry Pi intégrant le logiciel Motion pour la capture vidéo déclenchée par le mouvement, optimisant ainsi le stockage limité"
+        content: "L’objectif du projet était de concevoir un système de vision par ordinateur embarqué sur Raspberry Pi, capable de labelliser automatiquement le flux routier afin d’expliquer certaines anomalies observées dans les mesures de particules fines PM2.5."
       - type: text
-        content: "Implémentation d'une chaîne de traitement IA combinant YOLOv7 pour la détection d'objets et DeepSORT pour le suivi temporel, permettant d'identifier les flux de véhicules en temps réel."
+        content: "Afin de répondre aux contraintes de stockage et de réactivité des caméras embarquées, le logiciel Motion a été implémenté sur Raspberry Pi. Cette solution permettait de déclencher l’enregistrement vidéo uniquement en cas de détection de mouvement et a servi de base à la constitution d’un jeu de données visuelles synchronisé avec les relevés des micro-capteurs de pollution."
+      - type: images
+        items:
+          - src: "/assets/img/materiel.png"
+            caption: "Cartes Raspberry Pi 3 Model B+ et webcams utilisées pour l’acquisition de données sur le terrain"
+          - src: "/assets/img/setup.png"
+            caption: "Dispositif expérimental mis en place pour comparer les mesures issues des capteurs Tera et CozyConnect"
+          - src: "/assets/img/cars.png"
+            caption: "Pipeline de détection reposant sur YOLOv7 et suivi d’identité assuré par DeepSORT"
       - type: text
-        content: "Développement d'un algorithme d'annotation automatique basé sur des critères cinématiques (vitesse, accélération) pour classifier les comportements des véhicules malgré les erreurs de tracking"
+        content: "Un algorithme d’annotation automatique fondé sur des critères cinématiques, tels que la vitesse et l’accélération, a été développé afin de classifier les véhicules comme étant en mouvement ou à l’arrêt. Cette couche logique a permis de corriger certaines erreurs inhérentes au tracking, notamment lors d’occlusions ou de faux appariements, et de générer des labels précis pour chaque image."
       - type: text
-        content: "Synchronisation temporelle et fusion des flux de données vidéo annotées avec les relevés PM2.5 provenant des API Tera et CozyConnect pour l'analyse de corrélation"
-    
-  - name: "Micro-entreprise Eclair-CIE"
-    context: "Projet entrepreneurial mené en partenariat avec un lycée et une association, visant à accompagner des élèves en bac professionnel dans la création d'une micro-entreprise."
-    objective: "Permettre à des lycéens de créer et gérer une micro-entreprise réelle — catalogue, site web, production et vente — pour financer un voyage scolaire."
-    result: "Micro-entreprise créée et opérationnelle, avec réalisation d'un catalogue produit, d'un site web et d'une campagne de vente réussie."
-    tags: ["Gestion de projet", "Entrepreneuriat", "Web", "Trésorerie"]
+        content: "La phase finale du projet a consisté à fusionner les annotations issues de la vision par ordinateur avec les données de concentration en PM2.5 récupérées via les API Web de Tera et CozyConnect. L’application de filtres médians et de fenêtres temporelles a permis d’analyser la relation entre le passage des véhicules et la persistance des polluants dans l’air."
+      - type: text
+        content: "Les travaux ont permis de valider une méthodologie de fusion de données multi-sources, avec un retour positif des encadrants concernant la pertinence de l’analyse cinématique proposée."
+  
+  - name: "Création de la micro-entreprise Eclair-CIE"
+    context: "Ce projet entrepreneurial et social a été mené en partenariat avec un lycée professionnel et une association afin d'initier des élèves de bac professionnel aux réalités du monde de l'entreprise."
+    tags: ["Gestion de projet", "Impression 3D", "Web Design"]
     demo: "https://eclair-cie.super.site"
-    details:
+    blocks:
       - type: text
-        content: "J'ai accompagné des élèves en bac professionnel dans la création et la gestion d'une micro-entreprise, en partenariat avec leur lycée et une association locale. Mon rôle était de les guider sur les aspects entrepreneuriaux et techniques du projet."
+        content: "L’objectif consistait à accompagner une classe dans la création complète d’une micro‑entreprise, depuis la conception des produits jusqu’à la gestion financière, afin de financer une sortie scolaire. L’accompagnement portait sur l’ensemble des étapes clés de la création de valeur, de l’étude de marché initiale à la construction d’un catalogue produit cohérent, tout en initiant les élèves aux principes de la gestion de projet agile."
+      - type: images
+        items:
+          - src: "/assets/img/d3.png"
+            caption: "Système d'impression 3D mis en place pour la fabrication des produits"
+          - src: "/assets/img/eolienne.png"
+            caption: "Exemple d'un produit conçu et fabriqué pour la vente : une éolienne miniature fonctionnelle imprimée en 3D"
+          - src: "/assets/img/carte.png"
+            caption: "Protoype de carte multifonctionnelle produite par les élèves"
       - type: text
-        content: "Les livrables incluaient la réalisation d'un catalogue produit, la création d'un site web vitrine, et l'organisation complète de la production et de la vente. J'ai également géré la trésorerie de la structure pour assurer sa viabilité financière."
+        content: "J'ai assuré la gestion numérique par la création d'un site web vitrine et le suivi rigoureux de la trésorerie de la structure. Cette double approche, technique et administrative, a permis de transformer une initiative pédagogique en une réussite commerciale concrète, offrant aux élèves une immersion gratifiante dans l'entrepreneuriat moderne."
       - type: text
-        content: "L'objectif final — financer un voyage scolaire grâce aux bénéfices générés — a été atteint, offrant aux élèves une expérience concrète de l'entrepreneuriat."
+        content: "La structure est devenue pleinement opérationnelle et a généré les premieres bénéfices nécessaires au financement du projet pédagogique, validant ainsi l'acquisition de compétences concrètes par les élèves et la continuation future."
 
 skills:
   - category: "Programmation"
     items: ["Python", "SQL", "Java", "R"]
   - category: "Machine Learning"
-    items: ["Scikit-learn", "PyTorch", "TensorFlow", "Pandas", "NumPy", "YOLOv11"]
+    items: ["Scikit-learn", "PyTorch", "TensorFlow", "Pandas", "NumPy", "OpenCV"]
   - category: "Cloud & Data"
     items: ["AWS", "PostgreSQL", "SQLite", "Streamlit"]
   - category: "Langues"

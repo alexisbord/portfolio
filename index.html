@@ -64,6 +64,30 @@ layout: default
   </div>
 </section>
 
+<!-- ═══════════════════════════════════════════════════════════
+     COMPÉTENCES
+     ═══════════════════════════════════════════════════════════ -->
+<section class="section" id="competences">
+  <div class="col-center">
+    <div class="section-header">
+      <h2 class="section-title">Compétences</h2>
+      <div class="accent-line"></div>
+    </div>
+    <div class="skills-grid">
+      {% for group in site.data.portfolio.skills %}
+      <div class="skill-group reveal">
+        <h3 class="skill-group__title">{{ group.category }}</h3>
+        <div class="skill-group__items">
+          {% for item in group.items %}
+          <span class="skill-tag">{{ item }}</span>
+          {% endfor %}
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
 
 <!-- ═══════════════════════════════════════════════════════════
      EXPÉRIENCE
@@ -207,7 +231,7 @@ layout: default
           <h3 class="project__name">{{ project.name }}</h3>
         </div>
         <div class="project__links">
-          {% if project.demo %}<a href="{{ project.demo }}" class="btn btn--ghost btn--sm" target="_blank" rel="noopener"><i class="fas fa-external-link-alt"></i> Demo</a>{% endif %}
+          {% if project.demo %}<a href="{{ project.demo }}" class="btn btn--ghost btn--sm" target="_blank" rel="noopener"><i class="fas fa-external-link-alt"></i> Site</a>{% endif %}
           {% if project.github %}<a href="{{ project.github }}" class="btn btn--ghost btn--sm" target="_blank" rel="noopener"><i class="fab fa-github"></i> Code</a>{% endif %}
         </div>
       </div>
@@ -220,13 +244,46 @@ layout: default
           {% if block.type == "text" %}
           <p class="project__text">{{ block.content }}</p>
           {% elsif block.type == "images" %}
-          <div class="project__images project__images--{{ block.items | size }}">
+          {% assign img_count = block.items | size %}
+          <div class="project__images project__images--{{ img_count }}">
             {% for img in block.items %}
             <figure class="project__figure">
               <img src="{{ img.src }}" alt="{{ img.alt }}" loading="lazy">
               {% if img.caption %}<figcaption>{{ img.caption }}</figcaption>{% endif %}
             </figure>
             {% endfor %}
+          </div>
+          {% elsif block.type == "layout3" %}
+          <div class="project__layout3">
+            {% for img in block.cols %}
+            <figure class="project__figure">
+              <img src="{{ img.src }}" alt="{{ img.caption }}" loading="lazy" style="object-fit: contain;">
+              {% if img.caption %}<figcaption>{{ img.caption }}</figcaption>{% endif %}
+            </figure>
+            {% endfor %}
+            <div class="project__layout-right">
+              {% for img in block.stack %}
+              <figure class="project__figure">
+                <img src="{{ img.src }}" alt="{{ img.caption }}" loading="lazy" style="object-fit: contain;">
+                {% if img.caption %}<figcaption>{{ img.caption }}</figcaption>{% endif %}
+              </figure>
+              {% endfor %}
+            </div>
+          </div>
+          {% elsif block.type == "layout" %}
+          <div class="project__layout">
+            <figure class="project__figure project__layout-left">
+              <img src="{{ block.left.src }}" alt="{{ block.left.caption }}" loading="lazy">
+              {% if block.left.caption %}<figcaption>{{ block.left.caption }}</figcaption>{% endif %}
+            </figure>
+            <div class="project__layout-right">
+              {% for img in block.right %}
+              <figure class="project__figure">
+                <img src="{{ img.src }}" alt="{{ img.caption }}" loading="lazy">
+                {% if img.caption %}<figcaption>{{ img.caption }}</figcaption>{% endif %}
+              </figure>
+              {% endfor %}
+            </div>
           </div>
           {% endif %}
         {% endfor %}
