@@ -284,15 +284,19 @@
           <div class="modal__body">
             
               
-              <p class="modal__text">Au sein de Vinci Cegelec à Puteaux, j'ai réalisé un POC sur la solution SaaS Teepee afin d'automatiser deux processus métiers clés pour l'équipe.</p>
+              <p class="modal__text">Au sein de Cegelec Projets Espace & Hydrogène, j'ai accompagné l'acquisition de la licence SaaS Teepee en pilotant un POC visant à tester le déploiement et à identifier les limites techniques de la solution pour l'automatisation des processus métiers.</p>
               
             
               
-              <p class="modal__text">Premier livrable : un tableau de bord de suivi des candidats, facilitant la visibilité sur l'ensemble du processus de recrutement et permettant aux managers de suivre les candidatures en temps réel.</p>
+              <p class="modal__text">J'ai d'abord répondu à la complexité du suivi des candidatures, avec un processus qui implique des validations croisées entre les RH, la Direction Technique et les opérationnels, en développant un tableau de bord centralisé pour avoir un résumé global clair garantissant la conformité RGPD.</p>
               
             
               
-              <p class="modal__text">Second livrable : un outil de suivi en temps réel des expéditions de matériel vers la Guyane, garantissant une traçabilité complète et réduisant les pertes d'information entre les équipes logistiques.</p>
+              <p class="modal__text">Concernant la logistique, j'ai évalué la faisabilité technique du remplacement d'une base Microsoft Access obsolète par un outil de suivi des expéditions vers la Guyane, testant ainsi les limites de la solution SaaS pour assurer une traçabilité complète.</p>
+              
+            
+              
+              <p class="modal__text">Cette mission a permis de confirmer la viabilité de l'automatisation, aboutissant à une configuration RH prête pour un test en conditions réelles et à une analyse précise des contraintes de migration pour les flux logistiques.</p>
               
             
           </div>
@@ -387,117 +391,124 @@
     </div>
 
     
-    
-    <article class="project reveal is-clickable"
-      data-modal="datathon-udem-planificateur-de-repas-intelligent">
+    <article class="project reveal">
       <div class="project__header">
         <div class="project__title-row">
           <h3 class="project__name">Datathon UdeM — Planificateur de repas intelligent</h3>
-          <span class="card-hint"><i class="fas fa-expand-alt"></i> Lire plus</span>
         </div>
         <div class="project__links">
           
-          <a href="https://github.com/alexisbord/UdeM_Hack" class="btn btn--ghost btn--sm" target="_blank" rel="noopener" onclick="event.stopPropagation()"><i class="fab fa-github"></i> Code</a>
+          <a href="https://github.com/alexisbord/UdeM_Hack" class="btn btn--ghost btn--sm" target="_blank" rel="noopener"><i class="fab fa-github"></i> Code</a>
         </div>
       </div>
-      <p class="project__text">Projet réalisé lors du Datathon de l'Université de Montréal, remporté avec le Prix de la meilleure utilisation de l'IA.</p>
-      <p class="project__text"><strong>Objectif :</strong> Développer un planificateur de repas intelligent combinant détection d'ingrédients par vision par ordinateur, recommandation de recettes et suivi calorique intégré.</p>
+
+      <p class="project__text">Projet réalisé lors du Datathon de l'Université de Montréal en groupe de 3.</p>
       
+
       
-      <p class="project__text project__text--result"><i class="fas fa-chart-line"></i> <strong>Résultat :</strong> Prix de la meilleure utilisation de l'IA décerné par le jury du Datathon UdeM.</p>
+        
+          
+          <p class="project__text">NutriSnap permet de scanner le contenu d'un réfrigérateur pour générer instantanément des suggestions de recettes saines. Le système calcule le Nutri-Score et les apports nutritionnels (protéines, sucres, graisses) de chaque plat pour aider l'utilisateur à maintenir une alimentation équilibrée selon ses objectifs personnels.</p>
+          
+        
+          
+          <div class="project__images project__images--2">
+            
+            <figure class="project__figure">
+              <img src="/assets/img/fridge.jpg" alt="" loading="lazy">
+              <figcaption>Détection d'ingrédients par YOLOv11</figcaption>
+            </figure>
+            
+            <figure class="project__figure">
+              <img src="/assets/img/recipe.jpg" alt="" loading="lazy">
+              <figcaption>Interface de recommandation de recettes et Nutri-Score</figcaption>
+            </figure>
+            
+          </div>
+          
+        
+          
+          <p class="project__text">Côté technique, nous avons fine-tuné YOLOv11 sur une base de 30 ingrédients courants pour surpasser les limitations des modèles de zero-shot comme CLIP. Les données sont centralisées dans une base SQLite, permettant de croiser les apports caloriques avec les dépenses sportives récupérées via l'API Garmin.</p>
+          
+        
+          
+          <div class="project__images project__images--2">
+            
+            <figure class="project__figure">
+              <img src="/assets/img/assistant.jpg" alt="" loading="lazy">
+              <figcaption>Assistant IA personnalisé pour le suivi santé</figcaption>
+            </figure>
+            
+            <figure class="project__figure">
+              <img src="/assets/img/winner.jpg" alt="" loading="lazy">
+              <figcaption>Recommandations nutritionnelles personnalisées</figcaption>
+            </figure>
+            
+          </div>
+          
+        
+          
+          <p class="project__text">Le projet intègre également un chatbot agissant comme un coach de santé. En exploitant l'API OpenAI et les données physiologiques de l'utilisateur (poids, âge, activité physique), l'IA génère des programmes d'entraînement et des conseils nutritionnels sur mesure pour soutenir la motivation à long terme. Ce projet nous a permis , remporté avec le Prix de la meilleure utilisation de l'IA.</p>
+          
+        
       
+
+      
+
       <div class="tags">
         <span class="tag">Python</span><span class="tag">YOLOv11</span><span class="tag">Streamlit</span><span class="tag">SQLite</span><span class="tag">API Garmin</span><span class="tag">Computer Vision</span>
       </div>
     </article>
-
     
-    <div class="modal" id="modal-datathon-udem-planificateur-de-repas-intelligent" role="dialog" aria-modal="true">
-      <div class="modal__backdrop"></div>
-      <div class="modal__box">
-        <div class="modal__header">
-          <div>
-            <h2 class="modal__title">Datathon UdeM — Planificateur de repas intelligent</h2>
-            <p class="modal__sub">
-              <span class="tag">Python</span> <span class="tag">YOLOv11</span> <span class="tag">Streamlit</span> <span class="tag">SQLite</span> <span class="tag">API Garmin</span> <span class="tag">Computer Vision</span> 
-            </p>
-          </div>
-          <button class="modal__close" aria-label="Fermer"><i class="fas fa-times"></i></button>
+    <article class="project reveal">
+      <div class="project__header">
+        <div class="project__title-row">
+          <h3 class="project__name">IMT Nord Europe — Annotation automatique de données de pollution</h3>
         </div>
-        <div class="modal__body">
+        <div class="project__links">
           
-            
-            <p class="modal__text">Dans le cadre du Datathon organisé par l'Université de Montréal, nous avons développé en équipe une application de planification de repas intelligente, récompensée par le prix de la meilleure utilisation de l'IA.</p>
-            
-          
-            
-            <p class="modal__text">L'application repose sur trois modules : la détection automatique d'ingrédients via YOLOv11 à partir d'une photo du réfrigérateur, un moteur de recommandation de recettes basé sur les ingrédients détectés, et la synchronisation du suivi calorique avec l'API Garmin.</p>
-            
-          
-            
-            <p class="modal__text">L'interface a été développée sous Streamlit avec un stockage SQLite pour la persistance des données utilisateur. Le projet a été conçu, développé et présenté en moins de 24 heures.</p>
-            
-          
+          <a href="https://github.com/eSaleh/P6_Systeme_annotation_donnees_polution.git" class="btn btn--ghost btn--sm" target="_blank" rel="noopener"><i class="fab fa-github"></i> Code</a>
         </div>
       </div>
-    </div>
+
+      <p class="project__text">Projet de recherche académique réalisé en collaboration avec le Groupe Tera pour corréler événements urbains et qualité de l'air</p>
+      <p class="project__text"><strong>Objectif :</strong> Développer un système de vision par ordinateur sur Raspberry Pi pour détecter le trafic routier et synchroniser ces événements avec les mesures de micro-capteurs de pollution PM2.5</p>
+
+      
+
+      
+      <p class="project__text project__text--result"><i class="fas fa-chart-line"></i> <strong>Résultat :</strong> Validation d'une méthodologie de fusion de données multi-sources et accueil positif des encadrants pour la pertinence de l'approche en recherche environnementale</p>
+      
+
+      <div class="tags">
+        <span class="tag">Python</span><span class="tag">YOLOv7</span><span class="tag">DeepSORT</span><span class="tag">Raspberry Pi</span><span class="tag">OpenCV</span><span class="tag">Pandas</span><span class="tag">API Web</span>
+      </div>
+    </article>
     
-    
-    
-    <article class="project reveal is-clickable"
-      data-modal="micro-entreprise-eclair-cie">
+    <article class="project reveal">
       <div class="project__header">
         <div class="project__title-row">
           <h3 class="project__name">Micro-entreprise Eclair-CIE</h3>
-          <span class="card-hint"><i class="fas fa-expand-alt"></i> Lire plus</span>
         </div>
         <div class="project__links">
-          <a href="https://eclair-cie.super.site" class="btn btn--ghost btn--sm" target="_blank" rel="noopener" onclick="event.stopPropagation()"><i class="fas fa-external-link-alt"></i> Demo</a>
+          <a href="https://eclair-cie.super.site" class="btn btn--ghost btn--sm" target="_blank" rel="noopener"><i class="fas fa-external-link-alt"></i> Demo</a>
           
         </div>
       </div>
+
       <p class="project__text">Projet entrepreneurial mené en partenariat avec un lycée et une association, visant à accompagner des élèves en bac professionnel dans la création d'une micro-entreprise.</p>
       <p class="project__text"><strong>Objectif :</strong> Permettre à des lycéens de créer et gérer une micro-entreprise réelle — catalogue, site web, production et vente — pour financer un voyage scolaire.</p>
+
       
+
       
       <p class="project__text project__text--result"><i class="fas fa-chart-line"></i> <strong>Résultat :</strong> Micro-entreprise créée et opérationnelle, avec réalisation d'un catalogue produit, d'un site web et d'une campagne de vente réussie.</p>
       
+
       <div class="tags">
         <span class="tag">Gestion de projet</span><span class="tag">Entrepreneuriat</span><span class="tag">Web</span><span class="tag">Trésorerie</span>
       </div>
     </article>
-
-    
-    <div class="modal" id="modal-micro-entreprise-eclair-cie" role="dialog" aria-modal="true">
-      <div class="modal__backdrop"></div>
-      <div class="modal__box">
-        <div class="modal__header">
-          <div>
-            <h2 class="modal__title">Micro-entreprise Eclair-CIE</h2>
-            <p class="modal__sub">
-              <span class="tag">Gestion de projet</span> <span class="tag">Entrepreneuriat</span> <span class="tag">Web</span> <span class="tag">Trésorerie</span> 
-            </p>
-          </div>
-          <button class="modal__close" aria-label="Fermer"><i class="fas fa-times"></i></button>
-        </div>
-        <div class="modal__body">
-          
-            
-            <p class="modal__text">J'ai accompagné des élèves en bac professionnel dans la création et la gestion d'une micro-entreprise, en partenariat avec leur lycée et une association locale. Mon rôle était de les guider sur les aspects entrepreneuriaux et techniques du projet.</p>
-            
-          
-            
-            <p class="modal__text">Les livrables incluaient la réalisation d'un catalogue produit, la création d'un site web vitrine, et l'organisation complète de la production et de la vente. J'ai également géré la trésorerie de la structure pour assurer sa viabilité financière.</p>
-            
-          
-            
-            <p class="modal__text">L'objectif final — financer un voyage scolaire grâce aux bénéfices générés — a été atteint, offrant aux élèves une expérience concrète de l'entrepreneuriat.</p>
-            
-          
-        </div>
-      </div>
-    </div>
-    
     
   </div>
 </section>

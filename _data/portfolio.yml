@@ -36,11 +36,13 @@ experience:
     tags: ["SQL", "Excel", "SaaS"]
     details:
       - type: text
-        content: "Au sein de Vinci Cegelec à Puteaux, j'ai réalisé un POC sur la solution SaaS Teepee afin d'automatiser deux processus métiers clés pour l'équipe."
+        content: "Au sein de Cegelec Projets Espace & Hydrogène, j'ai accompagné l'acquisition de la licence SaaS Teepee en pilotant un POC visant à tester le déploiement et à identifier les limites techniques de la solution pour l'automatisation des processus métiers."
       - type: text
-        content: "Premier livrable : un tableau de bord de suivi des candidats, facilitant la visibilité sur l'ensemble du processus de recrutement et permettant aux managers de suivre les candidatures en temps réel."
+        content: "J'ai d'abord répondu à la complexité du suivi des candidatures, avec un processus qui implique des validations croisées entre les RH, la Direction Technique et les opérationnels, en développant un tableau de bord centralisé pour avoir un résumé global clair garantissant la conformité RGPD."
       - type: text
-        content: "Second livrable : un outil de suivi en temps réel des expéditions de matériel vers la Guyane, garantissant une traçabilité complète et réduisant les pertes d'information entre les équipes logistiques."
+        content: "Concernant la logistique, j'ai évalué la faisabilité technique du remplacement d'une base Microsoft Access obsolète par un outil de suivi des expéditions vers la Guyane, testant ainsi les limites de la solution SaaS pour assurer une traçabilité complète."
+      - type: text
+        content: "Cette mission a permis de confirmer la viabilité de l'automatisation, aboutissant à une configuration RH prête pour un test en conditions réelles et à une analyse précise des contraintes de migration pour les flux logistiques."
 education:
   - degree: "Maîtrise en génie informatique, option ingénierie et analytique des données"
     school: "Polytechnique Montréal"
@@ -62,19 +64,47 @@ education:
 
 projects:
   - name: "Datathon UdeM — Planificateur de repas intelligent"
-    context: "Projet réalisé lors du Datathon de l'Université de Montréal, remporté avec le Prix de la meilleure utilisation de l'IA."
-    objective: "Développer un planificateur de repas intelligent combinant détection d'ingrédients par vision par ordinateur, recommandation de recettes et suivi calorique intégré."
-    result: "Prix de la meilleure utilisation de l'IA décerné par le jury du Datathon UdeM."
+    context: "Projet réalisé lors du Datathon de l'Université de Montréal en groupe de 3."
     tags: ["Python", "YOLOv11", "Streamlit", "SQLite", "API Garmin", "Computer Vision"]
     github: "https://github.com/alexisbord/UdeM_Hack"
+    blocks:
+      - type: text
+        content: "NutriSnap permet de scanner le contenu d'un réfrigérateur pour générer instantanément des suggestions de recettes saines. Le système calcule le Nutri-Score et les apports nutritionnels (protéines, sucres, graisses) de chaque plat pour aider l'utilisateur à maintenir une alimentation équilibrée selon ses objectifs personnels."
+      - type: images
+        items:
+          - src: "/assets/img/fridge.jpg"
+            caption: "Détection d'ingrédients par YOLOv11"
+          - src: "/assets/img/recipe.jpg"
+            caption: "Interface de recommandation de recettes et Nutri-Score"
+      - type: text
+        content: "Côté technique, nous avons fine-tuné YOLOv11 sur une base de 30 ingrédients courants pour surpasser les limitations des modèles de zero-shot comme CLIP. Les données sont centralisées dans une base SQLite, permettant de croiser les apports caloriques avec les dépenses sportives récupérées via l'API Garmin."
+      - type: images
+        items:
+          - src: "/assets/img/assistant.jpg"
+            caption: "Assistant IA personnalisé pour le suivi santé"
+          - src: "/assets/img/winner.jpg"
+            caption: "Recommandations nutritionnelles personnalisées"
+      - type: text
+        content: "Le projet intègre également un chatbot agissant comme un coach de santé. En exploitant l'API OpenAI et les données physiologiques de l'utilisateur (poids, âge, activité physique), l'IA génère des programmes d'entraînement et des conseils nutritionnels sur mesure pour soutenir la motivation à long terme. Ce projet nous a permis , remporté avec le Prix de la meilleure utilisation de l'IA."
+        
+
+  - name: "IMT Nord Europe — Annotation automatique de données de pollution"
+    context: "Projet de recherche académique réalisé en collaboration avec le Groupe Tera pour corréler événements urbains et qualité de l'air"
+    objective: "Développer un système de vision par ordinateur sur Raspberry Pi pour détecter le trafic routier et synchroniser ces événements avec les mesures de micro-capteurs de pollution PM2.5"
+    result: "Validation d'une méthodologie de fusion de données multi-sources et accueil positif des encadrants pour la pertinence de l'approche en recherche environnementale"
+    context: "Projet de recherche académique réalisé en collaboration avec le Groupe Tera pour corréler événements urbains et qualité de l'air"
+    tags: ["Python", "YOLOv7", "DeepSORT", "Raspberry Pi", "OpenCV", "Pandas", "API Web"]
+    github: "https://github.com/eSaleh/P6_Systeme_annotation_donnees_polution.git"
     details:
       - type: text
-        content: "Dans le cadre du Datathon organisé par l'Université de Montréal, nous avons développé en équipe une application de planification de repas intelligente, récompensée par le prix de la meilleure utilisation de l'IA."
+        content: "Conception d'une architecture embarquée sur Raspberry Pi intégrant le logiciel Motion pour la capture vidéo déclenchée par le mouvement, optimisant ainsi le stockage limité"
       - type: text
-        content: "L'application repose sur trois modules : la détection automatique d'ingrédients via YOLOv11 à partir d'une photo du réfrigérateur, un moteur de recommandation de recettes basé sur les ingrédients détectés, et la synchronisation du suivi calorique avec l'API Garmin."
+        content: "Implémentation d'une chaîne de traitement IA combinant YOLOv7 pour la détection d'objets et DeepSORT pour le suivi temporel, permettant d'identifier les flux de véhicules en temps réel."
       - type: text
-        content: "L'interface a été développée sous Streamlit avec un stockage SQLite pour la persistance des données utilisateur. Le projet a été conçu, développé et présenté en moins de 24 heures."
-
+        content: "Développement d'un algorithme d'annotation automatique basé sur des critères cinématiques (vitesse, accélération) pour classifier les comportements des véhicules malgré les erreurs de tracking"
+      - type: text
+        content: "Synchronisation temporelle et fusion des flux de données vidéo annotées avec les relevés PM2.5 provenant des API Tera et CozyConnect pour l'analyse de corrélation"
+    
   - name: "Micro-entreprise Eclair-CIE"
     context: "Projet entrepreneurial mené en partenariat avec un lycée et une association, visant à accompagner des élèves en bac professionnel dans la création d'une micro-entreprise."
     objective: "Permettre à des lycéens de créer et gérer une micro-entreprise réelle — catalogue, site web, production et vente — pour financer un voyage scolaire."

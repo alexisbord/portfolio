@@ -201,71 +201,45 @@ layout: default
     </div>
 
     {% for project in site.data.portfolio.projects %}
-    {% assign proj_id = project.name | slugify %}
-    <article class="project reveal {% if project.details %}is-clickable{% endif %}"
-      {% if project.details %}data-modal="{{ proj_id }}"{% endif %}>
+    <article class="project reveal">
       <div class="project__header">
         <div class="project__title-row">
           <h3 class="project__name">{{ project.name }}</h3>
-          {% if project.details %}<span class="card-hint"><i class="fas fa-expand-alt"></i> Lire plus</span>{% endif %}
         </div>
         <div class="project__links">
-          {% if project.demo %}<a href="{{ project.demo }}" class="btn btn--ghost btn--sm" target="_blank" rel="noopener" onclick="event.stopPropagation()"><i class="fas fa-external-link-alt"></i> Demo</a>{% endif %}
-          {% if project.github %}<a href="{{ project.github }}" class="btn btn--ghost btn--sm" target="_blank" rel="noopener" onclick="event.stopPropagation()"><i class="fab fa-github"></i> Code</a>{% endif %}
+          {% if project.demo %}<a href="{{ project.demo }}" class="btn btn--ghost btn--sm" target="_blank" rel="noopener"><i class="fas fa-external-link-alt"></i> Demo</a>{% endif %}
+          {% if project.github %}<a href="{{ project.github }}" class="btn btn--ghost btn--sm" target="_blank" rel="noopener"><i class="fab fa-github"></i> Code</a>{% endif %}
         </div>
       </div>
+
       {% if project.context %}<p class="project__text">{{ project.context }}</p>{% endif %}
       {% if project.objective %}<p class="project__text"><strong>Objectif :</strong> {{ project.objective }}</p>{% endif %}
-      {% if project.images %}
-      <div class="project__images project__images--{{ project.images | size }}">
-        {% for img in project.images %}
-        <figure class="project__figure">
-          <img src="{{ img.src | replace: 'assets/css', 'assets/img' }}" alt="{{ img.alt }}" loading="lazy">
-          {% if img.alt %}<figcaption>{{ img.alt }}</figcaption>{% endif %}
-        </figure>
+
+      {% if project.blocks %}
+        {% for block in project.blocks %}
+          {% if block.type == "text" %}
+          <p class="project__text">{{ block.content }}</p>
+          {% elsif block.type == "images" %}
+          <div class="project__images project__images--{{ block.items | size }}">
+            {% for img in block.items %}
+            <figure class="project__figure">
+              <img src="{{ img.src }}" alt="{{ img.alt }}" loading="lazy">
+              {% if img.caption %}<figcaption>{{ img.caption }}</figcaption>{% endif %}
+            </figure>
+            {% endfor %}
+          </div>
+          {% endif %}
         {% endfor %}
-      </div>
       {% endif %}
+
       {% if project.result %}
       <p class="project__text project__text--result"><i class="fas fa-chart-line"></i> <strong>Résultat :</strong> {{ project.result }}</p>
       {% endif %}
+
       <div class="tags">
         {% for tag in project.tags %}<span class="tag">{{ tag }}</span>{% endfor %}
       </div>
     </article>
-
-    {% if project.details %}
-    <div class="modal" id="modal-{{ proj_id }}" role="dialog" aria-modal="true">
-      <div class="modal__backdrop"></div>
-      <div class="modal__box">
-        <div class="modal__header">
-          <div>
-            <h2 class="modal__title">{{ project.name }}</h2>
-            <p class="modal__sub">
-              {% for tag in project.tags %}<span class="tag">{{ tag }}</span> {% endfor %}
-            </p>
-          </div>
-          <button class="modal__close" aria-label="Fermer"><i class="fas fa-times"></i></button>
-        </div>
-        <div class="modal__body">
-          {% for block in project.details %}
-            {% if block.type == "text" %}
-            <p class="modal__text">{{ block.content }}</p>
-            {% elsif block.type == "images" %}
-            <div class="modal__images modal__images--{{ block.items | size }}">
-              {% for img in block.items %}
-              <figure class="project__figure">
-                <img src="{{ img.src | replace: 'assets/css', 'assets/img' }}" alt="{{ img.alt }}" loading="lazy">
-                {% if img.caption %}<figcaption>{{ img.caption }}</figcaption>{% endif %}
-              </figure>
-              {% endfor %}
-            </div>
-            {% endif %}
-          {% endfor %}
-        </div>
-      </div>
-    </div>
-    {% endif %}
     {% endfor %}
   </div>
 </section>
