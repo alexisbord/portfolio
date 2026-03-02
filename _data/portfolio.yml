@@ -28,46 +28,47 @@ experience:
     company: "Arc"
     logo: "/assets/img/arc.png"
     period: "Avril — Août 2024"
-    description: "▸ Conduite d'une étude de faisabilité pour l'intégration de l'IA sur une ligne de production afin d'améliorer le contrôle qualité \n▸ Développement et évaluation de modèles d'IA (supervisés/non supervisés) sur des images acquises par ordinateur industriel \n▸ Étude comparative de solutions d'industrialisation de fournisseurs pour choisir celle la plus adaptée aux contraintes de production"
+    description: "▸ Étude de faisabilité pour automatiser le contrôle qualité d'une ligne à 100 000 articles/jour, représentant un surcoût de 300k€/an \n▸ Entraînement et évaluation de modèles supervisés et non supervisés sur 5 000 images acquises via un ordinateur industriel \n▸ Benchmark de 5 solutions d'industrialisation pour identifier la plus adaptée aux contraintes de production"
     result: "Approbation du projet par la direction, déclenchant l'acquisition en location d'une unité pilote pour des tests réelssur ligne de production"
     tags: ["Python", "Deep Learning", "Computer Vision"]
     details:
       - type: text
-        content: "Arc est le huitième plus grand site industriel français et un leader mondial des arts de la table, engagé dans le développement et la fabrication de produits en verre, dont le verre coloré teinté dans la masse. Au sein de ce groupe industriel, j’ai mené une étude de faisabilité visant à intégrer une solution d’intelligence artificielle pour le contrôle qualité de nouvelles gammes en verre opale coloré, qui nécessite un manuel puisque les machines actuelles ne sont pas suffisantes. "
+        content: "Arc est le huitième plus grand site industriel français et un leader mondial des arts de la table. Au sein de ce groupe, j'ai mené une étude de faisabilité visant à intégrer une solution d'IA pour le contrôle qualité d'une ligne produisant 100 000 articles par jour, un processus alors entièrement manuel générant un surcoût opérationnel estimé à 300k€/an."
       - type: text
-        content: "J’ai assuré la collecte et la structuration des données sur un banc d’essai industriel que j’ai mis en place, en optimisant les paramètres d’acquisition (luminosité, réglages caméras) afin de constituer un jeu de données exploitable pour l’entraînement et l’évaluation des modèles. J’ai d’abord validé la performance d’une approche par réseaux de neurones convolutifs (CNN) en apprentissage supervisé, en démontrant des résultats au moins équivalents aux systèmes de vision classiques."
+        content: "J'ai constitué un dataset de 5 000 images sur un banc d'essai industriel que j'ai mis en place, en optimisant les paramètres d'acquisition (luminosité, réglages caméras). J'ai validé la performance d'une approche CNN en apprentissage supervisé, démontrant des résultats équivalents aux systèmes de vision classiques."
       - type: images
         items:
           - src: "assets/img/banc.png"
-            caption: "Banc de test"
-      - type: text 
-        content: "Face à la diversité croissante des articles et des défauts, j’ai ensuite orienté le projet vers une approche non supervisée basée sur des auto-encodeurs afin de développer un système de détection d’anomalies plus flexible et généralisable, permettant de démontrer la pertinence de la solution et d’obtenir la validation de la direction."
+            caption: "Banc de test mis en place pour la collecte des données"
+      - type: text
+        content: "Face à la diversité croissante des défauts, j'ai orienté le projet vers une approche non supervisée par auto-encodeurs, plus flexible et généralisable, permettant d'obtenir la validation de la direction sans nécessiter de renouvellement du dataset à chaque nouvelle gamme."
       - type: images
         items:
           - src: "assets/img/autoencodeur.png"
             caption: "Classification non supervisée par auto-encodeur pour la détection des défauts"
       - type: text
-        content: "En parallèle, j’ai mené une prospection auprès de différents fournisseurs afin de comparer les solutions d’industrialisation les plus adaptées aux contraintes des lignes de production et d’identifier l’architecture technique la plus pertinente, ce qui a conduit au choix d’une solution pilote déployée pour des tests en conditions réelles."
+        content: "En parallèle, j'ai comparé 5 solutions d'industrialisation fournisseurs sur des critères techniques et économiques, ce qui a conduit au choix d'une unité pilote déployée pour des tests en conditions réelles sur la ligne de production."
       - type: images
         items:
           - src: "assets/img/industrialisation.png"
             caption: "Solution d'industrialisation de l'entreprise retenue"
+
   - title: "Stage Data Analyst"
     company: "Vinci – Cegelec Projets Espace & Hydrogène"
     logo: "/assets/img/cegelec.png"
     period: "Mai — Août 2023"
-    description: "▸ Réalisation d'un POC sur la solution SaaS Teepee pour l'automatisation de processus métiers : \n▸ Développement d’un tableau de bord de suivi des candidats, facilitant la visibilité sur le processus de recrutement \n▸ Création d’un outil de suivi en temps réel des expéditions vers la Guyane, garantissant la traçabilité complète du matériel"
+    description: "▸ POC sur la solution SaaS Teepee ciblant l'automatisation de 2 processus métiers clés \n▸ Tableau de bord de recrutement générant 4 documents automatiquement et centralisant les validations multi-équipes \n▸ Outil de suivi logistique en 5 étapes pour les expéditions vers la Guyane, en remplacement d'une base Access obsolète"
     result: "Automatisation réussie des processus cibles, marquée par le test de l'outil de recrutement en conditions réelles par l'équipe RH"
     tags: ["SQL", "Excel", "SaaS"]
     details:
       - type: text
-        content: "Au sein de Cegelec Projets Espace & Hydrogène, j'ai accompagné l'acquisition de la licence SaaS Teepee en pilotant un POC visant à tester le déploiement et à identifier les limites techniques de la solution pour l'automatisation des processus métiers."
+        content: "Au sein de Cegelec Projets Espace & Hydrogène, j'ai piloté un POC sur la solution SaaS Teepee pour tester son déploiement sur 2 processus métiers distincts et identifier les limites techniques de la solution."
       - type: text
-        content: "J'ai d'abord répondu à la complexité du suivi des candidatures, avec un processus qui implique des validations croisées entre les RH, la Direction Technique et les opérationnels, en développant un tableau de bord centralisé pour avoir un résumé global clair garantissant la conformité RGPD."
+        content: "Pour le processus de recrutement, j'ai développé un tableau de bord centralisé gérant les validations croisées entre RH, Direction Technique et opérationnels. L'outil génère automatiquement 4 documents clés, garantissant la conformité RGPD et réduisant significativement le temps de traitement des candidatures."
       - type: text
-        content: "Concernant la logistique, j'ai évalué la faisabilité technique du remplacement d'une base Microsoft Access obsolète par un outil de suivi des expéditions vers la Guyane, testant ainsi les limites de la solution SaaS pour assurer une traçabilité complète."
+        content: "Pour la logistique, j'ai structuré un outil de suivi des expéditions vers la Guyane en 5 étapes clés (importation SAP, cadencement, réception, stockage et sortie), en remplacement d'une base Microsoft Access obsolète, assurant une traçabilité complète du matériel expédié."
       - type: text
-        content: "Cette mission a permis de confirmer la viabilité de l'automatisation, aboutissant à une configuration RH prête pour un test en conditions réelles et à une analyse précise des contraintes de migration pour les flux logistiques."
+        content: "Cette mission a confirmé la viabilité de l'automatisation des 2 processus cibles, aboutissant à une configuration RH testée en conditions réelles par l'équipe et à une analyse précise des contraintes de migration logistique."
 education:
   - degree: "Maîtrise en génie informatique, option ingénierie et analytique des données"
     school: "Polytechnique Montréal"
@@ -126,15 +127,31 @@ projects:
           - src: "/assets/img/cars.png"
             caption: "Pipeline de détection reposant sur YOLOv7 et suivi d’identité assuré par DeepSORT"
       - type: text
-        content: "Un algorithme d’annotation automatique fondé sur des critères cinématiques, tels que la vitesse et l’accélération, a été développé afin de classifier les véhicules comme étant en mouvement ou à l’arrêt. Cette couche logique a permis de corriger certaines erreurs inhérentes au tracking, notamment lors d’occlusions ou de faux appariements, et de générer des labels précis pour chaque image."
+        content: "Un algorithme d’annotation automatique fondé sur des critères cinématiques, tels que la vitesse et l’accélération, a été développé afin de classifier les véhicules comme étant en mouvement ou à l’arrêt. Cette couche logique a permis de corriger certaines erreurs inhérentes au tracking, notamment lors d’occlusions ou de faux appariements et de générer des labels précis pour chaque image."
       - type: text
         content: "La phase finale du projet a consisté à fusionner les annotations issues de la vision par ordinateur avec les données de concentration en PM2.5 récupérées via les API Web de Tera et CozyConnect. L’application de filtres médians et de fenêtres temporelles a permis d’analyser la relation entre le passage des véhicules et la persistance des polluants dans l’air."
       - type: text
         content: "Les travaux ont permis de valider une méthodologie de fusion de données multi-sources, avec un retour positif des encadrants concernant la pertinence de l’analyse cinématique proposée."
-  
+
+  - name: "Dashboard personnel d'activité des données Garmin"
+    context: "Il s'agit d'un projet personnel de data engineering et de visualisation interactive basé sur les exports SQLite de Garmin."
+    tags: ["Python", "Flask", "D3.js", "SQLite"]
+    github: "https://github.com/alexisbord/Dataviz_Garmin"
+    blocks:
+      - type: text
+        content: "L'objectif est de transformer plusieurs années de données personnelles Garmin (activités, sommeil, fréquence cardiaque) en visualisations interactives exploitables, différentes de celles proposées par Garmin. Le projet repose sur une architecture full-stack claire : une API REST Flask interroge les bases SQLite exportées depuis Garmin Connect et un client html/css + D3 se charge de l'affichage."
+      - type: images
+        items:
+          - src: "/assets/img/cumulative_dist.png"
+            caption: "Distance cumulée de course à pied sur plusieurs années"
+          - src: "/assets/img/beeswarm.png"
+            caption: "Distribution annuelle des activités sportives"
+      - type: text
+        content: "Côté backend, j'ai conçu des endpoints RESTful exposant les données d'activité structurées, avec une configuration par variables d'environnement pour un déploiement flexible. Côté frontend, les visualisations D3 intègrent un scaling dynamique et des interactions hover pour explorer les métriques dans le temps."
+
   - name: "Création de la micro-entreprise Eclair-CIE"
     context: "Ce projet entrepreneurial et social a été mené en partenariat avec un lycée professionnel et une association afin d'initier des élèves de bac professionnel aux réalités du monde de l'entreprise."
-    tags: ["Gestion de projet", "Impression 3D", "Web Design"]
+    tags: ["Gestion de projet", "Impression 3D"]
     demo: "https://eclair-cie.super.site"
     blocks:
       - type: text
@@ -151,6 +168,7 @@ projects:
         content: "J'ai assuré la gestion numérique par la création d'un site web vitrine et le suivi rigoureux de la trésorerie de la structure. Cette double approche, technique et administrative, a permis de transformer une initiative pédagogique en une réussite commerciale concrète, offrant aux élèves une immersion gratifiante dans l'entrepreneuriat moderne."
       - type: text
         content: "La structure est devenue pleinement opérationnelle et a généré les premieres bénéfices nécessaires au financement du projet pédagogique, validant ainsi l'acquisition de compétences concrètes par les élèves et la continuation future."
+
 
 skills:
   - category: "Programmation"
